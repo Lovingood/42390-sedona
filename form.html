@@ -10,7 +10,7 @@
 
       <!-- Navigation -->
       <nav class="main-navigation clearfix">
-        <button class="close"></button>
+        <button class="close">Закрыть</button>
 
         <a href="#">Информация</a>
         <a href="#" class="offset">Фото и видео</a>
@@ -21,11 +21,7 @@
       <div class="main-navigation-row">
         <figure class="logo"><img src="img/logo.png" height="70" width="138" alt=""></figure>
 
-        <button type="button" class="navigation-toggle">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
+        <button type="button" class="navigation-toggle">Меню</button>
       </div>
 
       <!-- задний фон горы + псевдоэлемент с маской -->
@@ -34,17 +30,13 @@
       </div>
     </header>
 
-    <div class="main-content">
-      <header class="page-title">
-        <p class="main-title">Оставьте свой отзыв</p>
-        <p>Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
-      </header>      
-    </div>
+    <section class="main-content">
+      <h1 class="main-title">Оставьте свой отзыв</h1>
+      <p>Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
 
-    <div class="form-block">
       <form action="#">
         <div class="form-group">
-          <p class="form-title">Представьтесь, пожалуйста:</p>
+          <h2 class="form-title">Представьтесь, пожалуйста:</h2>
 
           <label for="surname">Фамилия:</label>
           <input type="text" id="surname" name="surname" value="Иванов">
@@ -57,7 +49,7 @@
         </div>
 
         <div class="form-group">
-          <p class="form-title">Ваше общее впечатление:</p>
+          <h2 class="form-title">Ваше общее впечатление:</h2>
 
           <input type="radio" id="positive" name="impression" checked>
           <label for="positive">Скорее положительное</label>
@@ -67,28 +59,34 @@
         </div>
 
         <div class="form-group">
-          <p class="form-title">Даты вашей поездки:</p>
+          <h2 class="form-title">Даты вашей поездки:</h2>
 
           <label for="start-date">Дата приезда:</label>
           <input type="date" id="start-date" name="start-date">
           
           
           <label for="duration">Длительность пребывания</label>
-          <div class="btn btn-minus"></div>
-          <input type="text" id="duration" name="duration" placeholder="14 дн.">
-          <div class="btn btn-plus"></div>
+
+          <div class="counter">
+            <button class="btn btn-minus"></button>
+            <input type="text" id="duration" name="duration" placeholder="14 дн.">
+            <button class="btn btn-plus"></button>
+          </div>
 
           <label for="end-date">Дата отъезда:</label>
           <input type="date" id="end-date" name="end-date">          
         </div>
 
         <div class="form-group">
-          <p class="form-title">Кол-во путешественников:</p>
+          <h2 class="form-title">Кол-во путешественников:</h2>
 
           <label for="amount">Количество путешественников:</label>
-          <div class="btn btn-minus"></div>
-          <input type="text" id="duration" name="duration" placeholder="2 чел.">
-          <div class="btn btn-plus"></div>
+          
+          <div class="counter">
+            <button class="btn btn-minus"></button>
+            <input type="text" id="duration" name="duration" placeholder="2 чел.">
+            <button class="btn btn-plus"></button>
+          </div>
         </div>
 
         <div class="form-group">
@@ -146,41 +144,41 @@
         <div class="form-group">
           <p class="form-title">Загрузите фотографии:</p>
 
-          <button class="btn">Выбрать фотографии</button>
+          <input type="file" class="btn">Выбрать фотографии</input>
 
           <figure class="photo">
-            <div class="close"></div>
-            <img src="" alt="">
+            <a href="#" class="photo-delete">Закрыть</a>
+            <img src="#" alt="">
           </figure>
           <figure class="photo">
-            <div class="close"></div>
-            <img src="" alt="">
+            <a href="#" class="photo-delete">Закрыть</a>
+            <img src="#" alt="">
           </figure>
           <figure class="photo">
-            <div class="close"></div>
-            <img src="" alt="">
+            <a href="#" class="photo-delete">Закрыть</a>
+            <img src="#" alt="">
           </figure>
           <figure class="photo">
-            <div class="close"></div>
-            <img src="" alt="">
+            <a href="#" class="photo-delete">Закрыть</a>
+            <img src="#" alt="">
           </figure>
           <figure class="photo">
-            <div class="close"></div>
-            <img src="" alt="">
+            <a href="#" class="photo-delete">Закрыть</a>
+            <img src="#" alt="">
           </figure>
           <figure class="photo">
-            <div class="close"></div>
-            <img src="" alt="">
+            <a href="#" class="photo-delete">Закрыть</a>
+            <img src="#" alt="">
           </figure>
           <figure class="photo">
-            <div class="close"></div>
-            <img src="" alt="">
+            <a href="#" class="photo-delete">Закрыть</a>
+            <img src="#" alt="">
           </figure>
         </div>
 
         <button class="btn blue-btn" type="submit">Оставить отзыв</button>
       </form>
-    </div>
+    </section>
 
     <!-- footer -->
     <footer class="main-footer clearfix">
