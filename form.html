@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Sedona</title>
+</head>
+<body>
+  <div class="container">
+    <header class="main-header">
+
+      <!-- Navigation -->
+      <nav class="main-navigation clearfix">
+        <button class="close"></button>
+
+        <a href="#">Информация</a>
+        <a href="#" class="offset">Фото и видео</a>
+        <a href="#" class="">Карта штата</a>
+        <a href="#" class="">Гостиницы</a>
+      </nav>
+      
+      <div class="main-navigation-row">
+        <figure class="logo"><img src="img/logo.png" height="70" width="138" alt=""></figure>
+
+        <button type="button" class="navigation-toggle">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+
+      <!-- задний фон горы + псевдоэлемент с маской -->
+      <div class="promo-block">
+        <img src="img/welcome_short.png" alt="Sedona">
+      </div>
+    </header>
+
+    <div class="main-content">
+      <header class="page-title">
+        <p class="main-title">Оставьте свой отзыв</p>
+        <p>Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+      </header>      
+    </div>
+
+    <div class="form-block">
+      <form action="#">
+        <div class="form-group">
+          <p class="form-title">Представьтесь, пожалуйста:</p>
+
+          <label for="surname">Фамилия:</label>
+          <input type="text" id="surname" name="surname" value="Иванов">
+
+          <label for="name">Имя:</label>
+          <input type="text" id="name" name="name" value="Петр">
+
+          <label for="patronymic">Отчество:</label>
+          <input type="text" id="patronymic" name="patronymic" value="Александрович">
+        </div>
+
+        <div class="form-group">
+          <p class="form-title">Ваше общее впечатление:</p>
+
+          <input type="radio" id="positive" name="impression" checked>
+          <label for="positive">Скорее положительное</label>
+
+          <input type="radio" id="negative" name="impression" checked>
+          <label for="negative">Скорее отрицательное</label>
+        </div>
+
+        <div class="form-group">
+          <p class="form-title">Даты вашей поездки:</p>
+
+          <label for="start-date">Дата приезда:</label>
+          <input type="date" id="start-date" name="start-date">
+          
+          
+          <label for="duration">Длительность пребывания</label>
+          <div class="btn btn-minus"></div>
+          <input type="text" id="duration" name="duration" placeholder="14 дн.">
+          <div class="btn btn-plus"></div>
+
+          <label for="end-date">Дата отъезда:</label>
+          <input type="date" id="end-date" name="end-date">          
+        </div>
+
+        <div class="form-group">
+          <p class="form-title">Кол-во путешественников:</p>
+
+          <label for="amount">Количество путешественников:</label>
+          <div class="btn btn-minus"></div>
+          <input type="text" id="duration" name="duration" placeholder="2 чел.">
+          <div class="btn btn-plus"></div>
+        </div>
+
+        <div class="form-group">
+          <div class="person-block clearfix">
+            <div class="number-column">
+              <label for="number 1">№</label>
+              <input type="text" value="1">
+            </div>
+            <div class="info-column">
+              <label for="contact-surname">Фамилия:</label>
+              <input type="text" id="contact-surname" name="contact-surname" value="Иванов">
+
+              <label for="contact-name">Имя:</label>
+              <input type="text" id="contact-name" name="contact-name" value="Петр">
+
+              <label for="contact-patronymic">Отчество:</label>
+              <input type="text" id="contact-patronymic" name="contact-patronymic" value="Александрович">              
+            </div>
+          </div>
+
+          <div class="person-block clearfix">
+            <div class="number-column">
+              <label for="number 1">№</label>
+              <input type="text" value="1">
+            </div>
+            <div class="info-column">
+              <label for="contact-surname">Фамилия:</label>
+              <input type="text" id="contact-surname" name="contact-surname" value="Иванов">
+
+              <label for="contact-name">Имя:</label>
+              <input type="text" id="contact-name" name="contact-name" value="Петр">
+
+              <label for="contact-patronymic">Отчество:</label>
+              <input type="text" id="contact-patronymic" name="contact-patronymic" value="Александрович">              
+            </div>
+          </div>          
+        </div>
+
+        <div class="form-group">
+          <p class="form-title">Посещенные достопримечательности:</p>
+
+          <input type="checkbox" id="ch-1" checked>
+          <label for="ch-1">Мост Дьявола</label>
+
+          <input type="checkbox" id="ch-1">
+          <label for="ch-1">Слайд-парк</label>
+
+          <input type="checkbox" id="ch-1" checked>
+          <label for="ch-1">Гора-Колокол</label>
+
+          <input type="checkbox" id="ch-1" checked>
+          <label for="ch-1">Красные скалы</label>                              
+        </div>
+
+        <div class="form-group">
+          <p class="form-title">Загрузите фотографии:</p>
+
+          <button class="btn">Выбрать фотографии</button>
+
+          <figure class="photo">
+            <div class="close"></div>
+            <img src="" alt="">
+          </figure>
+          <figure class="photo">
+            <div class="close"></div>
+            <img src="" alt="">
+          </figure>
+          <figure class="photo">
+            <div class="close"></div>
+            <img src="" alt="">
+          </figure>
+          <figure class="photo">
+            <div class="close"></div>
+            <img src="" alt="">
+          </figure>
+          <figure class="photo">
+            <div class="close"></div>
+            <img src="" alt="">
+          </figure>
+          <figure class="photo">
+            <div class="close"></div>
+            <img src="" alt="">
+          </figure>
+          <figure class="photo">
+            <div class="close"></div>
+            <img src="" alt="">
+          </figure>
+        </div>
+
+        <button class="btn blue-btn" type="submit">Оставить отзыв</button>
+      </form>
+    </div>
+
+    <!-- footer -->
+    <footer class="main-footer clearfix">
+      <a href="#" class="hashtag">#VISITSEDONA</a>
+
+      <div class="social-block">
+        <a href="#" class="social-link">Twitter<i class="icon-twitter"></i></a>
+        <a href="#" class="social-link">Facebook<i class="icon-fb"></i></a>
+        <a href="#" class="social-link">Youtube<i class="icon-youtube"></i></a>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
