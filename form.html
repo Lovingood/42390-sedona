@@ -12,16 +12,16 @@
         <nav class="main-nav">
           <button class="main-nav__close">Закрыть</button>
 
-          <a class="main-nav__item" href="#">Информация</a>
-          <a class="main-nav__item" href="#">Фото и видео</a>
-          <a class="main-nav__item" href="#">Карта штата</a>
-          <a class="main-nav__item" href="#">Гостиницы</a>
+          <a class="main-nav__link" href="#">Информация</a>
+          <a class="main-nav__link" href="#">Фото и видео</a>
+          <a class="main-nav__link" href="#">Карта штата</a>
+          <a class="main-nav__link" href="#">Гостиницы</a>
         </nav>
 
         <div class="top-row">
           <figure class="top-row__logo"><img src="img/logo.png" height="70" width="138" alt=""></figure>
 
-          <button class="top-row__toggle" type="button">Меню</button>
+          <button class="menu-toggle" type="button">Меню</button>
         </div>
 
         <!-- задний фон горы + псевдоэлемент с маской -->
@@ -35,7 +35,7 @@
         <p class="form-page__text">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
 
         <form class="form-review" action="#">
-          <div class="form-review__InputGroup">
+          <div class="form-review__input-group">
             <h2 class="form-review__title">Представьтесь, пожалуйста:</h2>
 
             <label class="form-review__label" for="surname">Фамилия:</label>
@@ -48,7 +48,7 @@
             <input class="form-review__input" type="text" id="patronymic" name="patronymic" value="Александрович">
           </div>
 
-          <div class="form-review__InputGroup">
+          <div class="form-review__input-group">
             <h2 class="form-review__title">Ваше общее впечатление:</h2>
 
             <input class="form-review__input form-review__input--radio" type="radio" id="positive" name="impression" checked>
@@ -58,7 +58,7 @@
             <label class="form-review__label form-review__label--radio" for="negative">Скорее отрицательное</label>
           </div>
 
-          <div class="form-review__InputGroup">
+          <div class="form-review__input-group">
             <h2 class="form-review__title">Даты вашей поездки:</h2>
 
             <label class="form-review__label" for="start-date">Дата приезда:</label>
@@ -67,29 +67,28 @@
 
             <label class="form-review__label" for="duration">Длительность пребывания</label>
 
-            <div class="form-review__counter">
-              <button class="form-review__button form-review__button--minus"></button>
-              <input class="form-review__input form-review__input--number" type="text" id="duration" name="duration" placeholder="14 дн.">
-              <button class="form-review__button form-review__button--plus"></button>
-            </div>
+            <div class="counter">
+              <button class="counter__button"><i class="icon-minus"></i></button>
+              <input class="counter__input" type="text" id="duration" name="duration" placeholder="14 дн.">
+              <button class="counter__button"><i class="icon-plus"></i></button>
+            </div>            
 
             <label class="form-review__label" for="end-date">Дата отъезда:</label>
             <input class="form-review__input form-review__input--date" type="date" id="end-date" name="end-date">
           </div>
 
-          <div class="form-review__InputGroup">
+          <div class="form-review__input-group">
             <h2 class="form-review__title">Кол-во путешественников:</h2>
 
             <label class="form-review__label" for="amount">Количество путешественников:</label>
-
-            <div class="form-review__counter">
-              <button class="form-review__button form-review__button--minus"></button>
-              <input class="form-review__input form-review__input--number" type="text" id="duration" name="duration" placeholder="2 чел.">
-              <button class="form-review__button form-review__button--plus"></button>
+            <div class="counter">
+              <button class="counter__button"><i class="icon-minus"></i></button>
+              <input class="counter__input" type="text" id="amount" name="amount" placeholder="2 чел.">
+              <button class="counter__button"><i class="icon-plus"></i></button>
             </div>
           </div>
 
-          <div class="form-review__InputGroup">
+          <div class="form-review__input-group">
             <div class="person-block">
               <div class="number-column">
                 <label class="form-review__label" for="number-1">№</label>
@@ -125,7 +124,7 @@
             </div>
           </div>
 
-          <div class="form-review__InputGroup">
+          <div class="form-review__input-group">
             <h2 class="form-review__title">Посещенные достопримечательности:</h2>
 
             <input class="form-review__input form-review__input--checkbox" type="checkbox" id="ch-1" checked>
@@ -141,7 +140,7 @@
             <label class="form-review__label form-review__label--checkbox" for="ch-1">Красные скалы</label>
           </div>
 
-          <div class="form-review__InputGroup">
+          <div class="form-review__input-group">
             <h2 class="form-review__title">Загрузите фотографии:</h2>
 
             <input class="form-review__input form-review__input--file" type="file">Выбрать фотографии</input>

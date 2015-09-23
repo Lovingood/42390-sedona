@@ -12,16 +12,16 @@
         <nav class="main-nav">
           <button class="main-nav__close">Закрыть</button>
 
-          <a class="main-nav__item" href="#">Информация</a>
-          <a class="main-nav__item" href="#">Фото и видео</a>
-          <a class="main-nav__item" href="#">Карта штата</a>
-          <a class="main-nav__item" href="#">Гостиницы</a>
+          <a class="main-nav__link" href="#">Информация</a>
+          <a class="main-nav__link" href="#">Фото и видео</a>
+          <a class="main-nav__link" href="#">Карта штата</a>
+          <a class="main-nav__link" href="#">Гостиницы</a>
         </nav>
 
         <div class="top-row">
           <figure class="top-row__logo"><img src="img/logo.png" height="70" width="138" alt=""></figure>
 
-          <button class="top-row__toggle" type="button">Меню</button>
+          <button class="menu-toggle" type="button">Меню</button>
         </div>
 
         <!-- задний фон горы + псевдоэлемент с маской -->
@@ -31,14 +31,14 @@
       </header>
 
       <article class="reasons">
-        <header class="reasons-header">
-          <h1 class="reasons-header__title">Седона - небольшой городок в Аризоне, заслуживающий большего!</h1>
-          <p class="reasons-header__text">Рассмотрим 5 причин, по которым Седона круче чем гранд каньон!</p>
+        <header class="reasons__header">
+          <h1 class="reasons__title">Седона - небольшой городок в Аризоне, заслуживающий большего!</h1>
+          <p class="reasons__text">Рассмотрим 5 причин, по которым Седона круче чем гранд каньон!</p>
         </header>
 
-        <div class="reason-row">
+        <div class="reasons__row">
           <!-- основной блок преймуществ  -->
-          <div class="reason reason--bgBlue">
+          <div class="reason reason--bg-blue">
             <h2 class="reason__title">Настоящий<br> городок</h2>
             <div class="reason__number">№1</div>
             <p class="reason__text">Седона не аттракцион для туристов, там течет жизнь</p>
@@ -50,42 +50,42 @@
           </figure>
         </div>
 
-        <div class="reason-row">
+        <div class="reasons__row">
 
           <!-- блок преймуществ c картинкой  -->
-          <div class="reason reason--iconHome">
+          <div class="reason reason--image reason--icon-home">
             <h2 class="reason__title">Жилье</h2>
             <p class="reason__text">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
           </div>
 
           <!-- блок преймуществ c картинкой  -->
-          <div class="reason reason--iconBurger">
+          <div class="reason reason--image reason--icon-burger">
             <h2 class="reason__title">Еда</h2>
             <p class="reason__text">Всегда заказывай фирменный бургер, вы не разочаруетесь!</p>
           </div>
 
           <!-- блок преймуществ c картинкой  -->
-          <div class="reason reason--Gift">
+          <div class="reason reason--image reason--icon-gift">
             <h2 class="reason__title">Сувениры</h2>
             <p class="reason__text">Не только китайского, но и местного производства</p>
           </div>
         </div>
 
-        <div class="reason-row reason-row--invert">
+        <div class="reasons__row reasons__row--invert">
           <!-- картинка -->
           <figure class="reason-picture">
             <img src="img/reason-2.jpg" alt="">
           </figure>
 
           <!-- основной блок преймуществ  -->
-          <div class="reason">
+          <div class="reason reason--bg-blue">
             <h2 class="reason__title">Там есть<br> мост дьявола</h2>
             <div class="reason__number">№2</div>
             <p class="reason__text">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
           </div>
         </div>
 
-        <div class="reason-row reason-row--bgGray">
+        <div class="reasons__row reasons__row--bg-gray">
 
           <!-- основной блок преймуществ  -->
           <div class="reason">
@@ -123,33 +123,33 @@
         <div class="form-hotels">
           <form action="post">
 
-          <div class="form-hotels__InputGroup">
+          <div class="form-hotels__input-group">
             <label class="form-hotels__label" for="d-1">Дата заезда:</label>
-            <input class="form-hotels__input form__input--date" id="d-1" type="date">
+            <input class="form-hotels__input form-hotels__input--date" id="d-1" type="date">
           </div>
 
-          <div class="form-hotels__InputGroup">
+          <div class="form-hotels__input-group">
             <label class="form-hotels__label" for="d-2">Дата выезда:</label>
             <input class="form-hotels__input form-hotels__input--date" id="d-2" type="date">
           </div>
 
-          <div class="form-hotels__InputGroup form-hotels__InputGroup--halfInput">
+          <div class="form-hotels__input-group form-hotels__input-group--half-input">
             <label class="form-hotels__label" for="n-1">Взрослые:</label>
-            <div class="form-hotels__input form-hotels__input--counter">
-              <button class="form-hotels__button form-hotels_button--minus"><i class="icon-minus"></i></button>
-              <input class="form-hotels__input form-hotels_input--number" type="number" value="0">
-              <button class="form-hotels__button form-hotels_button--plus"><i class="icon-plus"></i></button>
+            <div class="counter">
+              <button class="counter__button"><i class="icon-minus"></i></button>
+              <input class="counter__input" name="n-1" type="number" value="0">
+              <button class="counter__button"><i class="icon-plus"></i></button>
             </div>
 
             <label class="form-hotels__label" for="n-2">Дети:</label>
-            <div class="form-hotels__counter">
-              <button class="form-hotels__button form-hotels__button--minus"><i class="icon-minus"></i></button>
-              <input class="form-hotels__input form-hotels__input--number" type="number" value="0">
-              <button class="form-hotels__button form-hotels_button--plus"><i class="icon-plus"></i></button>
+            <div class="counter">
+              <button class="counter__button"><i class="icon-minus"></i></button>
+              <input class="counter__input" name="n-2" type="number" value="0">
+              <button class="counter__button"><i class="icon-plus"></i></button>
             </div>
           </div>
 
-            <button class="form-hotels__button form-hotels__button--submit" type="submit">Найти</button>
+            <button class="btn btn--submit" type="submit">Найти</button>
           </form>
         </div>
 
