@@ -4,92 +4,94 @@
   <meta charset="UTF-8">
   <title>Sedona</title>
 </head>
-<body>
-  <div class="container">
-    <header class="main-header">
+  <body>
+    <div class="container">
+      <header class="main-header">
 
-      <!-- Navigation -->
-      <nav class="main-navigation clearfix">
-        <button class="close">Закрыть</button>
+        <!-- Navigation -->
+        <nav class="main-nav">
+          <button class="main-nav__close">Закрыть</button>
 
-        <a href="#">Информация</a>
-        <a href="#" class="offset">Фото и видео</a>
-        <a href="#" class="">Карта штата</a>
-        <a href="#" class="">Гостиницы</a>
-      </nav>
-      
-      <div class="main-navigation-row">
-        <figure class="logo"><img src="img/logo.png" height="70" width="138" alt=""></figure>
+          <a class="main-nav__link" href="#">Информация</a>
+          <a class="main-nav__link" href="#">Фото и видео</a>
+          <a class="main-nav__link" href="#">Карта штата</a>
+          <a class="main-nav__link" href="#">Гостиницы</a>
+        </nav>
 
-        <button type="button" class="navigation-toggle">Меню</button>
-      </div>
+        <div class="top-row">
+          <figure class="top-row__logo"><img src="img/logo.png" height="70" width="138" alt=""></figure>
 
-      <!-- задний фон горы + псевдоэлемент с маской -->
-      <div class="promo-block">
-        <img src="img/welcome_short.png" alt="Sedona">
-      </div>
-    </header>
+          <button class="menu-toggle" type="button">Меню</button>
+        </div>
 
-    <section class="post-page">      
-      <h1 class="post-title">БЛОГ Шерифа</h1>
-      <p>Седона удивительный город! Горы здесь красного цвета, а местный шериф ведет блог и общается на форумах.</p>
+        <!-- задний фон горы + псевдоэлемент с маской -->
+        <div class="main-promo">
+          <img class="main-promo__image" src="img/welcome.png" height="352" width="458" alt="">
+        </div>
+      </header>
 
-      <article class="post-block">
-        <header class="post-header"> 
-          <div class="tags">
-            <div class="tags-date">Позавчера</div>
-            <div class="tags-type">Происшествия</div>
-          </div>        
-        
-          <h1 class="post-title">Внимание! сбежала моя домашняя анаконда</h1>
-          <p>Жители Седоны и гости города, будьте бдительны — Сбежала моя домашняя змея. Увидевшему срочно звонить 911 и бежать от нее подальше.</p>
-        </header>
+      <section class="post-page">
+        <h1 class="post-page__title">БЛОГ Шерифа</h1>
+        <p>Седона удивительный город! Горы здесь красного цвета, а местный шериф ведет блог и общается на форумах.</p>
 
-        <h2>Предыстория</h2>
-        <p>В далеком 85-ом я подобрал эту змею на трассе. Ее переехал грузовик и она валялась на обочине. Мне стало жаль ее и я решил взять ее с собой. Кинул в багажник пикапа и подумал  тогда: «Если доедет до Седоны живой, так и быть, оставлю ее себе»</p>
+        <article class="post">
+          <header class="post-header">
+            <div class="tags">
+              <div class="tags__date">Позавчера</div>
+              <div class="tags__type">Происшествия</div>
+            </div>
 
-        <h2>Пропажа</h2>
-        <p>Неделю назад я вернулся из канзаса и не нашел Анаконду дома. Обошел все 200 гектаров своего участка, но ее нигде нет. Решил сообщить в полицию, но вовремя вспомнил, что я и есть полиция, поэтому отправился на поиски сам. особые приметы змеи:</p>
+            <h1 class="post-header__title">Внимание! сбежала моя домашняя анаконда</h1>
+            <p class="post-header__text">Жители Седоны и гости города, будьте бдительны — Сбежала моя домашняя змея. Увидевшему срочно звонить 911 и бежать от нее подальше.</p>
+          </header>
 
-        <ul>
-          <li>Длина: 5 метров</li>
-          <li>Масса: 85 кг</li>
-          <li>Окраска: Серовато-зелёная</li>
-        </ul>
+          <h2>Предыстория</h2>
+          <p>В далеком 85-ом я подобрал эту змею на трассе. Ее переехал грузовик и она валялась на обочине. Мне стало жаль ее и я решил взять ее с собой. Кинул в багажник пикапа и подумал  тогда: «Если доедет до Седоны живой, так и быть, оставлю ее себе»</p>
 
-        <p>Если вы увидите эту змею, сразу звоните 911 и бегите со всех ног от нее!</p>
+          <h2>Пропажа</h2>
+          <p>Неделю назад я вернулся из канзаса и не нашел Анаконду дома. Обошел все 200 гектаров своего участка, но ее нигде нет. Решил сообщить в полицию, но вовремя вспомнил, что я и есть полиция, поэтому отправился на поиски сам. особые приметы змеи:</p>
 
-        <h2>Предостережение</h2>
-        <p>не пытайтесь убить змею, если увидите! Помните, что она тоже живое существо, хоть и выглядит не очень приятно. вот цитата, которая мне очень нравится:</p>
+          <ul>
+            <li>Длина: 5 метров</li>
+            <li>Масса: 85 кг</li>
+            <li>Окраска: Серовато-зелёная</li>
+          </ul>
 
-        <blockquote>
-          не пытайтесь убить змею, если увидите! Помните, что она тоже живое существо, хоть и выглядит не очень приятно. вот цитата, которая мне очень нравится:
-          <cite>Адриано Челентано</cite>
-        </blockquote>
-      </article>
+          <p>Если вы увидите эту змею, сразу звоните 911 и бегите со всех ног от нее!</p>
 
-      <div class="post-menu">
-        <a href="#" class="btn navi-btn short">Пред.</a>
-        <a href="#" class="btn navi-btn short">След.</a>
-        <a href="#" class="btn navi-btn">Назад к списку</a>
-      </div>
-    </section>
+          <h2>Предостережение</h2>
+          <p>не пытайтесь убить змею, если увидите! Помните, что она тоже живое существо, хоть и выглядит не очень приятно. вот цитата, которая мне очень нравится:</p>
 
-    <!-- footer -->
-    <footer class="main-footer clearfix">
-      <a href="#" class="hashtag">#VISITSEDONA</a>
+          <blockquote>
+            не пытайтесь убить змею, если увидите! Помните, что она тоже живое существо, хоть и выглядит не очень приятно. вот цитата, которая мне очень нравится:
+            <cite>Адриано Челентано</cite>
+          </blockquote>
+        </article>
 
-      <div class="social-block">
-        <a href="#" class="social-link">Twitter<i class="icon-twitter"></i></a>
-        <a href="#" class="social-link">Facebook<i class="icon-fb"></i></a>
-        <a href="#" class="social-link">Youtube<i class="icon-youtube"></i></a>
-      </div>
+        <div class="post-menu">
+          <a class="post-menu__item post-menu__item--half-width" href="#">Пред.</a>
+          <a class="post-menu__item post-menu__item--half-width" href="#">След.</a>
+          <a class="post-menu__item" href="#">Назад к списку</a>
+        </div>
+      </section>
 
-      <address class="author">
-        Разработано
-        <a href="https://htmlacademy.ru"><img src="img/htmlacademy.jpg" height="39" width="113" alt="htmlacademy.ru" class="author-image"></a>
-      </address>
-    </footer>
-  </div>
-</body>
-</html>     
+      <!-- footer -->
+      <footer class="main-footer">
+        <a class="main-footer__hashtag" href="#">#VISITSEDONA</a>
+
+        <div class="social">
+          <a class="social__link" href="#">Twitter<i class="icon-twitter"></i></a>
+          <a class="social__link" href="#">Facebook<i class="icon-fb"></i></a>
+          <a class="social__link" href="#">Youtube<i class="icon-youtube"></i></a>
+        </div>
+
+        <address class="author">
+          Разработано
+          <a class="author__link" href="https://htmlacademy.ru">
+            <img class="author__image" src="img/htmlacademy.jpg" height="39" width="113" alt="htmlacademy.ru">
+          </a>
+        </address>
+      </footer>
+    </div>
+  </body>
+</html>

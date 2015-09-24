@@ -9,39 +9,39 @@
       <header class="main-header">
 
         <!-- Navigation -->
-        <nav class="main-navigation clearfix">
-          <button class="close">Закрыть</button>
+        <nav class="main-nav">
+          <button class="main-nav__close">Закрыть</button>
 
-          <a href="#">Информация</a>
-          <a href="#" class="offset">Фото и видео</a>
-          <a href="#" class="">Карта штата</a>
-          <a href="#" class="">Гостиницы</a>
+          <a class="main-nav__link" href="#">Информация</a>
+          <a class="main-nav__link" href="#">Фото и видео</a>
+          <a class="main-nav__link" href="#">Карта штата</a>
+          <a class="main-nav__link" href="#">Гостиницы</a>
         </nav>
-      
-      <div class="main-navigation-row">
-        <figure class="logo"><img src="img/logo.png" height="70" width="138" alt=""></figure>
 
-        <button type="button" class="navigation-toggle">Меню</button>
-      </div>
+        <div class="top-row">
+          <figure class="top-row__logo"><img src="img/logo.png" height="70" width="138" alt=""></figure>
+
+          <button class="menu-toggle" type="button">Меню</button>
+        </div>
 
         <!-- задний фон горы + псевдоэлемент с маской -->
-        <div class="promo-block">
-          <img src="img/welcome.png" height="352" width="458" alt="">
+        <div class="main-promo">
+          <img class="main-promo__image" src="img/welcome.png" height="352" width="458" alt="">
         </div>
       </header>
 
       <article class="reasons">
-        <header class="reasons-title">
-          <h1 class="main-title">Седона - небольшой городок в Аризоне, заслуживающий большего!</h1>
-          <p>Рассмотрим 5 причин, по которым Седона круче чем гранд каньон!</p>
+        <header class="reasons__header">
+          <h1 class="reasons__title">Седона - небольшой городок в Аризоне, заслуживающий большего!</h1>
+          <p class="reasons__text">Рассмотрим 5 причин, по которым Седона круче чем гранд каньон!</p>
         </header>
 
-        <div class="reason-row reason-row-image">
+        <div class="reasons__row">
           <!-- основной блок преймуществ  -->
-          <div class="reason">
-            <h2 class="reason-title">Настоящий<br> городок</h2>
-            <div class="reason-number">№1</div>
-            <p class="reason-text">Седона не аттракцион для туристов, там течет жизнь</p>
+          <div class="reason reason--bg-blue">
+            <h2 class="reason__title">Настоящий<br> городок</h2>
+            <div class="reason__number">№1</div>
+            <p class="reason__text">Седона не аттракцион для туристов, там течет жизнь</p>
           </div>
 
           <!-- картинка -->
@@ -50,62 +50,62 @@
           </figure>
         </div>
 
-        <div class="reason-row">
+        <div class="reasons__row">
 
           <!-- блок преймуществ c картинкой  -->
-          <div class="reason reason-image reason-image-home">
-            <h2 class="reason-title">Жилье</h2>
-            <p class="reason-text">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+          <div class="reason reason--image reason--icon-home">
+            <h2 class="reason__title">Жилье</h2>
+            <p class="reason__text">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
           </div>
 
           <!-- блок преймуществ c картинкой  -->
-          <div class="reason reason-image reason-image-hamburger">
-            <h2 class="reason-title">Еда</h2>
-            <p class="reason-text">Всегда заказывай фирменный бургер, вы не разочаруетесь!</p>
+          <div class="reason reason--image reason--icon-burger">
+            <h2 class="reason__title">Еда</h2>
+            <p class="reason__text">Всегда заказывай фирменный бургер, вы не разочаруетесь!</p>
           </div>
 
           <!-- блок преймуществ c картинкой  -->
-          <div class="reason reason-image reason-image-gift">
-            <h2 class="reason-title">Сувениры</h2>
-            <p class="reason-text">Не только китайского, но и местного производства</p>
+          <div class="reason reason--image reason--icon-gift">
+            <h2 class="reason__title">Сувениры</h2>
+            <p class="reason__text">Не только китайского, но и местного производства</p>
           </div>
         </div>
 
-        <div class="reason-row reason-row-image reason-row-image-invert">
+        <div class="reasons__row reasons__row--invert">
           <!-- картинка -->
           <figure class="reason-picture">
             <img src="img/reason-2.jpg" alt="">
           </figure>
 
           <!-- основной блок преймуществ  -->
-          <div class="reason">
-            <h2 class="reason-title">Там есть<br> мост дьявола</h2>
-            <div class="reason-number">№2</div>
-            <p class="reason-text">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+          <div class="reason reason--bg-blue">
+            <h2 class="reason__title">Там есть<br> мост дьявола</h2>
+            <div class="reason__number">№2</div>
+            <p class="reason__text">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
           </div>
         </div>
 
-        <div class="reason-row reason-row-gray">
+        <div class="reasons__row reasons__row--bg-gray">
 
           <!-- основной блок преймуществ  -->
           <div class="reason">
-            <h2 class="reason-title">Небольшая площадь</h2>
-            <div class="reason-number">№3</div>
-            <p class="reason-text">Все достопримечательности находятся очень близко</p>
+            <h2 class="reason__title">Небольшая площадь</h2>
+            <div class="reason__number">№3</div>
+            <p class="reason__text">Все достопримечательности находятся очень близко</p>
           </div>
 
           <!-- основной блок преймуществ  -->
           <div class="reason">
-            <h2 class="reason-title">Красивая дорога</h2>
-            <div class="reason-number">№4</div>
-            <p class="reason-text">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+            <h2 class="reason__title">Красивая дорога</h2>
+            <div class="reason__number">№4</div>
+            <p class="reason__text">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
           </div>
 
           <!-- основной блок преймуществ  -->
           <div class="reason">
-            <h2 class="reason-title">Мало туристов</h2>
-            <div class="reason-number">№5</div>
-            <p class="reason-text">Большинство едет в Гранд Каньон и толпится там</p>
+            <h2 class="reason__title">Мало туристов</h2>
+            <div class="reason__number">№5</div>
+            <p class="reason__text">Большинство едет в Гранд Каньон и толпится там</p>
           </div>
 
         </div>
@@ -113,45 +113,45 @@
       </article>
 
       <div class="find-row">
-        <h2>Заинтересовались?</h2>
-        <p>Укажите предполагаемые даты поездки<br> и мы покажем вам лучшие предложения гостиниц в седоне</p>
-        <a href="form.html" class="btn btn-brown">Поиск гостиницы в Седоне</a>
+        <h2 class="find-row__title">Заинтересовались?</h2>
+        <p class="find-row__text">Укажите предполагаемые даты поездки<br> и мы покажем вам лучшие предложения гостиниц в седоне</p>
+        <a class="find-row__button" href="form.html">Поиск гостиницы в Седоне</a>
       </div>
 
       <div class="map">
 
-         <div class="form">
+        <div class="form-hotels">
           <form action="post">
-          
-          <div class="form-group">
-            <label for="d-1">Дата заезда:</label>
-            <input id="d-1" type="date">
+
+          <div class="form-hotels__input-group">
+            <label class="form-hotels__label" for="d-1">Дата заезда:</label>
+            <input class="form-hotels__input form-hotels__input--date" id="d-1" type="date">
           </div>
 
-          <div class="form-group">
-            <label for="d-2">Дата выезда:</label>
-            <input id="d-2" type="date">
+          <div class="form-hotels__input-group">
+            <label class="form-hotels__label" for="d-2">Дата выезда:</label>
+            <input class="form-hotels__input form-hotels__input--date" id="d-2" type="date">
           </div>
-          
-          <div class="form-group form-peoples">
-            <label for="n-1">Взрослые:</label>
-            <div class="input-btn">
-              <button class="counter counter-minus"><i class="icon-minus"></i></button>
-              <input type="number" value="0">
-              <button class="counter counter-plus"><i class="icon-plus"></i></button>
+
+          <div class="form-hotels__input-group form-hotels__input-group--half-input">
+            <label class="form-hotels__label" for="n-1">Взрослые:</label>
+            <div class="counter">
+              <button class="counter__button"><i class="icon-minus"></i></button>
+              <input class="counter__input" name="n-1" type="number" value="0">
+              <button class="counter__button"><i class="icon-plus"></i></button>
             </div>
 
-            <label for="n-2">Дети:</label>
-            <div class="input-btn">
-              <button class="counter counter-minus"><i class="icon-minus"></i></button>
-              <input type="number" value="0">
-              <button class="counter counter-plus"><i class="icon-plus"></i></button>
+            <label class="form-hotels__label" for="n-2">Дети:</label>
+            <div class="counter">
+              <button class="counter__button"><i class="icon-minus"></i></button>
+              <input class="counter__input" name="n-2" type="number" value="0">
+              <button class="counter__button"><i class="icon-plus"></i></button>
             </div>
           </div>
 
-            <button type="submit" class="btn btn-find">Найти</button>
+            <button class="btn btn--submit" type="submit">Найти</button>
           </form>
-        </div> 
+        </div>
 
         <!-- map -->
         <div class="map-canvas">
@@ -159,18 +159,20 @@
         </div>
 
         <!-- footer -->
-        <footer class="main-footer clearfix">
-          <a href="#" class="hashtag">#VISITSEDONA</a>
+        <footer class="main-footer">
+          <a class="main-footer__hashtag" href="#">#VISITSEDONA</a>
 
-          <div class="social-block">
-            <a href="#" class="social-link">Twitter<i class="icon-twitter"></i></a>
-            <a href="#" class="social-link">Facebook<i class="icon-fb"></i></a>
-            <a href="#" class="social-link">Youtube<i class="icon-youtube"></i></a>
+          <div class="social">
+            <a class="social__link" href="#">Twitter<i class="icon-twitter"></i></a>
+            <a class="social__link" href="#">Facebook<i class="icon-fb"></i></a>
+            <a class="social__link" href="#">Youtube<i class="icon-youtube"></i></a>
           </div>
 
           <address class="author">
             Разработано
-            <a href="https://htmlacademy.ru"><img src="img/htmlacademy.jpg" height="39" width="113" alt="htmlacademy.ru" class="author-image"></a>
+            <a class="author__link" href="https://htmlacademy.ru">
+              <img class="author__image" src="img/htmlacademy.jpg" height="39" width="113" alt="htmlacademy.ru">
+            </a>
           </address>
         </footer>
       </div>
