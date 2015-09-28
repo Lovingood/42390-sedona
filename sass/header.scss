@@ -90,7 +90,7 @@
   width: 23px;
   background-color: $blue-base;
   position: relative;
-  
+
   &:before, &:after {
     content: '';
     position: absolute;
@@ -98,7 +98,7 @@
     height: 5px;
     width: 23px;
     background-color: $blue-base;
-    left: 0; 
+    left: 0;
   }
 
   &:before {
