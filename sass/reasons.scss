@@ -1,0 +1,196 @@
+.reasons {
+  &__title {
+    text-align: center;
+    font-family: $font-family-base;
+    font-size: $font-size-large;
+    line-height: ($line-height-base + 2);
+    font-weight: $font-bold;
+    text-transform: uppercase;
+    color: #000;
+    padding: 20px;
+    padding-bottom: 35px;
+  }
+
+  &__text {
+    width: 280px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: $font-size-base;
+    line-height: ($line-height-base + 2);
+    font-weight: $font-normal;
+    text-transform: uppercase;
+    color: $text-base;
+    padding: 20px;
+    padding-top: 0;
+  }
+
+  &__row {
+    &--bg-gray {
+      background-color: $gray-lighter;
+
+      & .reason__text {
+        width: 280px;
+        box-sizing: border-box;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        padding-bottom: 30px;
+      }
+
+      & .reason:last-child {
+        & .reason__text {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+}
+
+.reason {
+
+  &--bg-blue {
+    background-color: $blue-base;
+  }
+
+  &--mask {
+    position: relative;
+    padding-top: 40px;
+
+    &:before {
+      content: '';
+      min-height: 37px;
+      display: block;
+      width: 100%;
+      background: url('../img/reason-mask.png') no-repeat;
+      background-size: 100% 37px;
+      position: absolute;
+      top: -1px;
+    }
+  }
+
+  &--image {
+    padding-left: 50px;
+    position: relative;
+
+    & .reason__title, .reason__number, .reason__text {
+      text-align: left;
+      margin: 0;
+    }
+  }
+
+  &--icon-home, &--icon-burger, &--icon-gift {
+    &:before {
+      content: '';
+      width: 37px;
+      height: 37px;
+      position: absolute;
+      left: 20px;
+      top: 30px;        
+    }
+  }
+
+  &--icon-home {
+    &:before {
+      background: url('../img/home.png') no-repeat;
+      background-size: cover;
+      width: 37px;
+      height: 37px;      
+    }
+  }
+
+  &--icon-burger {
+    &:before {
+      background: url('../img/hamburger.png') no-repeat;
+      background-size: cover;
+      width: 39px;
+      height: 37px;            
+    }
+  }
+
+  &--icon-gift {
+    &:before {
+      background: url('../img/gift.png') no-repeat;
+      background-size: cover;
+      width: 37px;
+      height: 43px;     
+    }
+  }
+
+  &__title {
+    text-align: center;
+    font-family: $font-family-base;
+    font-size: $font-size-large;
+    line-height: ($line-height-base + 2);
+    font-weight: $font-bold;
+    text-transform: uppercase;
+    color: #000;
+    padding: 20px;
+    padding-bottom: 15px;
+    margin: 0 auto;
+
+    &--white {
+      padding-top: 35px;
+    }
+  }
+
+  &__number {
+    color: $text-base;
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 15px;
+
+    &:before, &:after {
+      content: '—';
+    }
+
+    &:before {
+      margin-right: 5px;
+    }
+
+    &:after {
+      margin-left: 5px;
+    }
+  }
+
+  &__text {
+    text-align: center;
+    width: 280px;
+    font-size: $font-size-base;
+    line-height: $line-height-small;
+    font-weight: $font-normal;
+    text-transform: uppercase;
+    color: $text-base;
+    padding-top: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 0 auto;
+  }
+
+  &:last-child {
+    .reason__text {
+      padding-bottom: 35px;
+    }
+  }
+
+  &__title, &__number, &__text {
+    &--white {
+      color: #fff;
+      margin: 0 auto;
+    }
+  }
+
+  &__text {
+    &--white {
+      padding-bottom: 35px;
+    }
+  }
+}
+
+.reason-picture {
+  margin: 0;
+  min-height: 256px;
+
+  &__image {
+    width: 320px;
+    height: 256px;
+    display: block;
+  }
+}

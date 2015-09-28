@@ -1,0 +1,11 @@
+.row {
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+h2 {
+  margin: 0;
+}
