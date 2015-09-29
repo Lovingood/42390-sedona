@@ -5,6 +5,7 @@
 .map-canvas {
   min-height: 350px;
   background: url('../img/map--mobile.jpg') no-repeat;
+  background-size: cover;
   position: relative;
 
   &:before {
