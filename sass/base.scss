@@ -1,0 +1,27 @@
+body {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  color: $text-base;
+}
+
+.row {
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+h2 {
+  margin: 0;
+}
+
+.container {
+  min-width: 320px;
+  max-width: 460px;
+}
+
+button {
+  outline: none;
+  cursor: pointer;
+}

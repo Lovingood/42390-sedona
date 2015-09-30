@@ -1,0 +1,22 @@
+.map {
+  margin-bottom: 40px;
+}
+
+.map-canvas {
+  min-height: 350px;
+  background: url('../img/map--mobile.jpg') no-repeat;
+  background-size: cover;
+  position: relative;
+
+  &:before {
+    content: '';
+    width: 15px;
+    height: 15px;
+    background-color: $blue-base;
+    border: 5px solid #fff;
+    border-radius: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
+}
