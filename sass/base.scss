@@ -25,3 +25,27 @@ button {
   outline: none;
   cursor: pointer;
 }
+
+@mixin base_text() {
+  margin: 0 auto;
+  text-align: center;
+  font-size: $font-size-base;
+  line-height: ($line-height-base + 2);
+  font-weight: $font-normal;
+  text-transform: uppercase;
+  color: $text-base;
+}
+
+@mixin base_input() {
+  margin: 0 auto;
+  border: 0;
+  width: 100%;
+  display: block;
+  background-color: $input-bg-base;
+  font-weight: $font-bold;
+  font-size: $font-size-large;
+  padding: 20px;
+  line-height: ($line-height-base + 2);
+  outline: 0;
+  box-sizing: border-box;
+}

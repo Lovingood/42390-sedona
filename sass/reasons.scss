@@ -12,14 +12,7 @@
   }
 
   &__text {
-    width: 280px;
-    margin: 0 auto;
-    text-align: center;
-    font-size: $font-size-base;
-    line-height: ($line-height-base + 2);
-    font-weight: $font-normal;
-    text-transform: uppercase;
-    color: $text-base;
+    @include base_text;
     padding: 20px;
     padding-top: 0;
   }
@@ -29,7 +22,6 @@
       background-color: $gray-lighter;
 
       & .reason__text {
-        width: 280px;
         box-sizing: border-box;
         border-bottom: 1px solid rgba(0, 0, 0, 0.1);
         padding-bottom: 30px;
@@ -73,6 +65,7 @@
     & .reason__title, .reason__number, .reason__text {
       text-align: left;
       margin: 0;
+      padding-left: 20px;
     }
   }
 
@@ -151,17 +144,10 @@
   }
 
   &__text {
-    text-align: center;
-    width: 280px;
-    font-size: $font-size-base;
-    line-height: $line-height-small;
-    font-weight: $font-normal;
-    text-transform: uppercase;
-    color: $text-base;
+    @include base_text;
     padding-top: 0;
-    padding-left: 20px;
-    padding-right: 20px;
-    margin: 0 auto;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 
   &:last-child {
