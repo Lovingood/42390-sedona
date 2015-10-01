@@ -4,14 +4,13 @@
     padding: $padding-default;
     @include base_title;
     font-size: $font-size-largest;
-    
   }
 
   &__text {
     padding: $padding-default;
     @include base_text;
     padding-bottom: 20px;
-  }  
+  }
 }
 
 .post-header {
@@ -110,7 +109,7 @@
     margin-bottom: 20px;
     text-align: center;
     cursor: pointer;
-    
+
     &--full-width {
       width: 100%;
       margin-bottom: 0;
