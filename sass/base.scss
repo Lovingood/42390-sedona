@@ -2,6 +2,7 @@ body {
   font-family: $font-family-base;
   font-size: $font-size-base;
   color: $text-base;
+  min-width: 320px;
 }
 
 .row {
@@ -26,8 +27,13 @@ button {
   cursor: pointer;
 }
 
+.brown-text {
+  color: $brown-base;
+  text-decoration: underline;
+}
+
 @mixin base_text() {
-  margin: 0 auto;
+  margin: $margin-center;
   text-align: center;
   font-size: $font-size-base;
   line-height: ($line-height-base + 2);
@@ -36,8 +42,18 @@ button {
   color: $text-base;
 }
 
+@mixin base_title() {
+  text-align: center;
+  font-family: $font-family-base;
+  font-size: $font-size-large;
+  line-height: ($line-height-base + 2);
+  font-weight: $font-bold;
+  text-transform: uppercase;
+  color: #000;
+}
+
 @mixin base_input() {
-  margin: 0 auto;
+  margin: $margin-center;
   border: 0;
   width: 100%;
   display: block;
@@ -48,4 +64,12 @@ button {
   line-height: ($line-height-base + 2);
   outline: 0;
   box-sizing: border-box;
+}
+
+@mixin base_tags() {
+  font-style: $font-italic;
+  font-size: $font-size-base;
+  line-height: $line-height-small;
+  color: $gray-999;
+  text-transform: uppercase;
 }

@@ -1,0 +1,119 @@
+.post-page {
+
+  &__title {
+    padding: $padding-default;
+    @include base_title;
+    font-size: $font-size-largest;
+    
+  }
+
+  &__text {
+    padding: $padding-default;
+    @include base_text;
+    padding-bottom: 20px;
+  }  
+}
+
+.post-header {
+  &__title {
+    @include base_title;
+    font-size: ($font-size-larger + 3);
+    padding-top: 35px;
+    padding-bottom: 25px;
+    margin: 0;
+  }
+
+  &__text {
+    @include base_text;
+    color: $brown-base;
+    font-size: $font-size-large;
+    line-height: ($line-height-base + 2);
+    text-transform: none;
+  }
+}
+
+.post {
+  padding: $padding-default;
+  padding-top: 0;
+  padding-bottom: 35px;
+
+  & h2 {
+    @include base_title;
+    font-size: $font-size-largest;
+    text-align: left;
+    padding-top: 45px;
+    padding-bottom: 30px;
+  }
+
+  & p {
+    @include base_text;
+    text-align: left;
+  }
+
+  & ul {
+    list-style: none;
+    color: $gray-base;
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+    font-weight: $font-bold;
+    text-transform: uppercase;
+    padding: 0;
+
+    & li {
+      position: relative;
+      padding-left: 17px;
+
+      &:before {
+        content: '';
+        width: 7px;
+        height: 7px;
+        background-color: $blue-base;
+        position: absolute;
+        top: 8px;
+        left: 0;
+      }
+    }
+  }
+
+  & blockquote {
+    @include base_text;
+    text-align: left;
+    margin-top: 25px;
+    padding-left: 15px;
+    border-left: 2px solid $blue-base;
+  }
+
+  & cite {
+    display: block;
+    text-transform: none;
+    color: $brown-base;
+  }
+}
+
+.post-menu {
+  padding: 45px 6.25%;
+  border-top: 2px solid $gray-db;
+  border-bottom: 2px solid $gray-db;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  &__item {
+    padding: 15px 35px;
+    border: 2px solid $blue-base;
+    text-transform: uppercase;
+    color: #000;
+    text-decoration: none;
+    font-size: $font-size-larger;
+    font-weight: $font-bold;
+    margin-bottom: 20px;
+    text-align: center;
+    cursor: pointer;
+    
+    &--full-width {
+      width: 100%;
+      margin-bottom: 0;
+    }
+  }
+}

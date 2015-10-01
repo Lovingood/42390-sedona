@@ -72,13 +72,13 @@
   padding-top: 28px;
   padding-bottom: 28px;
 
-
   &__logo {
     position: absolute;
     top: 0;
     margin: 0;
     left: 50%;
     transform: translateX(-50%);
+    z-index: 1;
   }
 }
 
@@ -112,11 +112,15 @@
 
 .main-promo {
   padding-top: 76px;
+  padding-bottom: 76px;
   text-align: center;
   background: url('../img/bg-welcome-mobile.jpg') no-repeat;
   background-size: 100%;
-  min-height: 390px;
-  max-height: 390px;
+  position: relative;
+
+  &--short {
+    background-position: 0px -230px;
+  }
 
   &:after {
     content: '';
@@ -126,11 +130,11 @@
     background: url('../img/mask-mobile.png') no-repeat;
     background-size: 100% 37px;
     margin-top: 71px;
+    bottom: -1px;
+    position: absolute;
   }
 
   &__image {
-    margin: 0 auto;
-    width: 295px;
-    height: 280px;
+    margin: $margin-center;
   }
 }
