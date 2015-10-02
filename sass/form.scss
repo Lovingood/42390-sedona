@@ -1,0 +1,200 @@
+.form-page {
+  &__title {
+    text-align: center;
+    font-family: $font-family-base;
+    font-size: $font-size-large;
+    line-height: ($line-height-base + 2);
+    font-weight: $font-bold;
+    text-transform: uppercase;
+    color: #000;
+    padding: $padding-default;
+    padding-bottom: 35px;
+  }
+
+  &__text {
+    @include base_text;
+    padding: $padding-default;
+    padding-top: 0;
+  }
+}
+
+.form-review {
+  text-align: center;
+  margin-bottom: 110px;
+
+  &__input-group {
+    padding: $padding-default;
+    border-bottom: 1px solid $gray-sm-ligher;
+    text-align: left;
+
+    &--photo-group {
+      border-bottom: none;
+      font-size: 0;
+    }
+  }
+
+  &__button {
+    display: inline-block;
+    padding: 15px 54px;
+    text-transform: uppercase;
+    color: $link-base;
+    background-color: $blue-base;
+    font-size: $font-size-larger;
+    line-height: ($line-height-base + 2);
+    font-weight: $font-bold;
+    text-decoration: none;
+    border: none;
+  }
+
+  &__title {
+    text-align: center;
+    font-family: $font-family-base;
+    font-size: $font-size-large;
+    line-height: ($line-height-base + 2);
+    font-weight: $font-bold;
+    text-transform: uppercase;
+    color: #000;
+    padding: $padding-default;
+    padding-bottom: 35px;
+  }
+
+  &__label {
+    @include base_text;
+    display: block;
+    text-align: left;
+    padding-left: 20px;
+    padding-bottom: 10px;
+
+    &--radio {
+      display: inline-block;
+
+      &:before {
+        content: '';
+        width: 20px;
+        height: 20px;
+        background-color: $gray-lighten;
+        border: 15px solid $gray-lighten;
+        border-radius: 40px;
+        display: inline-block;
+        margin-right: 20px;
+        vertical-align: middle;
+      }
+    }
+
+    &--checkbox {
+      display: inline-block;
+      color: #000;
+      font-weight: $font-bold;
+      text-transform: none;
+      font-size: $font-size-large;
+
+      &:before {
+        content: '';
+        background-color: $gray-lighten;
+        border-radius: 5px;
+        display: inline-block;
+        margin-right: 20px;
+        vertical-align: middle;
+        width: 56px;
+        height: 56px;
+      }
+    }
+  }
+
+  &__input {
+    @include base_input;
+    margin-bottom: 20px;
+
+    &--radio {
+      display: none;
+
+      &:checked + .form-review__label::before {
+        background-color: $gray-base;
+      }
+    }
+
+    &--checkbox {
+      display: none;
+
+      &:checked + .form-review__label::before {
+        background: url('../img/check.png') no-repeat;
+        background-color: $gray-lighten;
+        background-position: center;
+      }
+    }
+
+    &--number {
+      text-align: center;
+    }
+  }
+
+  &__photo {
+    position: relative;
+    float: left;
+    width: 25%;
+    margin: 0;
+    margin-right: 12.5%;
+    margin-bottom: 35px;
+
+    &:nth-of-type(3n) {
+      margin-right: 0;
+    }
+
+    & > img {
+        display: block;
+    }
+  }
+
+  &__delete-link {
+    position: absolute;
+    top: -17px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0;
+    width: 30px;
+    height: 30px;
+    background: url('../img/delete_photo.png') no-repeat;
+  }
+}
+
+.counter {
+  font-size: 0;
+  text-align: center;
+
+  &__button {
+    width: 60px;
+    color: rgba(51, 51, 51, 0.3);
+    border: none;
+    background-color: $gray-lighten;
+    height: 66px;
+    font-size: $font-size-larger;
+    float: left;
+    vertical-align: middle;
+    padding-top: 5px;
+
+    &:last-child {
+      float: right;
+      margin-right: 0;
+    }
+  }
+
+  &__input {
+    @include base_input;
+    width: 55%;
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+}
+
+.number-column {
+  float: left;
+  width: 25%;
+  box-sizing: border-box;
+}
+
+.info-column {
+  float: right;
+  width: 75%;
+  padding-left: 10px;
+  box-sizing: border-box;
+}

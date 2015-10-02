@@ -2,7 +2,10 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Sedona</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sedona: Form</title>
+  <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+  <link href="css/style.css" rel="stylesheet">
 </head>
   <body>
     <div class="container">
@@ -18,15 +21,15 @@
           <a class="main-nav__link" href="#">Гостиницы</a>
         </nav>
 
-        <div class="top-row">
-          <figure class="top-row__logo"><img src="img/logo.png" height="70" width="138" alt=""></figure>
+        <div class="row top-row">
+          <a class="top-row__logo" href="index.html"><img src="img/logo.png" height="70" width="138" alt=""></a>
 
           <button class="menu-toggle" type="button">Меню</button>
         </div>
 
         <!-- задний фон горы + псевдоэлемент с маской -->
-        <div class="main-promo">
-          <img class="main-promo__image" src="img/welcome.png" height="352" width="458" alt="">
+        <div class="main-promo main-promo--short">
+          <img class="main-promo__image" src="img/welcome-short.png" height="30" width="174" alt="">
         </div>
       </header>
 
@@ -89,10 +92,10 @@
           </div>
 
           <div class="form-review__input-group">
-            <div class="person-block">
+            <div class="row person-block">
               <div class="number-column">
                 <label class="form-review__label" for="number-1">№</label>
-                <input class="form-review__input" type="text" id="number-1" value="1">
+                <input class="form-review__input form-review__input--number" type="text" id="number-1" value="1">
               </div>
               <div class="info-column">
                 <label class="form-review__label" for="contact-surname">Фамилия:</label>
@@ -106,10 +109,10 @@
               </div>
             </div>
 
-            <div class="person-block">
+            <div class="row person-block">
               <div class="number-column">
                 <label class="form-review__label" for="number-2">№</label>
-                <input class="form-review__input" type="text" value="2">
+                <input class="form-review__input form-review__input--number" type="text" value="2">
               </div>
               <div class="info-column">
                 <label class="form-review__label" for="contact-surname">Фамилия:</label>
@@ -127,51 +130,59 @@
           <div class="form-review__input-group">
             <h2 class="form-review__title">Посещенные достопримечательности:</h2>
 
-            <input class="form-review__input form-review__input--checkbox" type="checkbox" id="ch-1" checked>
-            <label class="form-review__label form-review__label--checkbox" for="ch-1">Мост Дьявола</label>
+            <div class="form-review__checkbox">
+              <input class="form-review__input form-review__input--checkbox" type="checkbox" id="ch-1" checked>
+              <label class="form-review__label form-review__label--checkbox" for="ch-1">Мост Дьявола</label>
+            </div>
 
-            <input class="form-review__input form-review__input--checkbox" type="checkbox" id="ch-1">
-            <label class="form-review__label form-review__label--checkbox" for="ch-1">Слайд-парк</label>
+            <div class="form-review__checkbox">
+              <input class="form-review__input form-review__input--checkbox" type="checkbox" id="ch-2">
+              <label class="form-review__label form-review__label--checkbox" for="ch-2">Слайд-парк</label>
+            </div>
 
-            <input class="form-review__input form-review__input--checkbox" type="checkbox" id="ch-1" checked>
-            <label class="form-review__label form-review__label--checkbox" for="ch-1">Гора-Колокол</label>
+            <div class="form-review__checkbox">
+              <input class="form-review__input form-review__input--checkbox" type="checkbox" id="ch-3" checked>
+              <label class="form-review__label form-review__label--checkbox" for="ch-3">Гора-Колокол</label>
+            </div>
 
-            <input class="form-review__input form-review__input--checkbox" type="checkbox" id="ch-1" checked>
-            <label class="form-review__label form-review__label--checkbox" for="ch-1">Красные скалы</label>
+            <div class="form-review__checkbox">
+              <input class="form-review__input form-review__input--checkbox" type="checkbox" id="ch-4" checked>
+              <label class="form-review__label form-review__label--checkbox" for="ch-4">Красные скалы</label>
+            </div>
           </div>
 
-          <div class="form-review__input-group">
+          <div class="row form-review__input-group form-review__input-group--photo-group">
             <h2 class="form-review__title">Загрузите фотографии:</h2>
 
-            <input class="form-review__input form-review__input--file" type="file">Выбрать фотографии</input>
+            <input class="form-review__input form-review__input--file" type="file" placeholder="Выбрать фотографии"></input>
 
             <figure class="form-review__photo">
               <a class="form-review__delete-link" href="#">Закрыть</a>
-              <img src="#" alt="">
+              <img src="img/preview_photo.jpg" alt="">
             </figure>
             <figure class="form-review__photo">
               <a class="form-review__delete-link" href="#">Закрыть</a>
-              <img src="#" alt="">
+              <img src="img/preview_photo.jpg" alt="">
             </figure>
             <figure class="form-review__photo">
               <a class="form-review__delete-link" href="#">Закрыть</a>
-              <img src="#" alt="">
+              <img src="img/preview_photo.jpg" alt="">
             </figure>
             <figure class="form-review__photo">
               <a class="form-review__delete-link" href="#">Закрыть</a>
-              <img src="#" alt="">
+              <img src="img/preview_photo.jpg" alt="">
             </figure>
             <figure class="form-review__photo">
               <a class="form-review__delete-link" href="#">Закрыть</a>
-              <img src="#" alt="">
+              <img src="img/preview_photo.jpg" alt="">
             </figure>
             <figure class="form-review__photo">
               <a class="form-review__delete-link" href="#">Закрыть</a>
-              <img src="#" alt="">
+              <img src="img/preview_photo.jpg" alt="">
             </figure>
             <figure class="form-review__photo">
               <a class="form-review__delete-link" href="#">Закрыть</a>
-              <img src="#" alt="">
+              <img src="img/preview_photo.jpg" alt="">
             </figure>
           </div>
 
@@ -185,7 +196,7 @@
 
         <div class="social">
           <a class="social__link" href="#">Twitter<i class="icon-twitter"></i></a>
-          <a class="social__link" href="#">Facebook<i class="icon-fb"></i></a>
+          <a class="social__link" href="#">Facebook<i class="icon-facebook"></i></a>
           <a class="social__link" href="#">Youtube<i class="icon-youtube"></i></a>
         </div>
       </footer>
