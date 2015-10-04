@@ -24,7 +24,7 @@
     @media (min-width: $screen-sm-min) {
       width: 100%;
       border-bottom: none;
-    }    
+    }
   }
 }
 
@@ -36,7 +36,7 @@
     width: 45%;
 
     &:nth-of-type(1), &:nth-of-type(2) {
-      border-top: 2px solid $gray-db;      
+      border-top: 2px solid $gray-db;
     }
   }
 
@@ -57,7 +57,7 @@
   &--post {
     @media (min-width: $screen-sm-min) {
       width: ((256% / 768) * 100);
-      margin: 0 auto;      
+      margin: 0 auto;
     }
   }
 
