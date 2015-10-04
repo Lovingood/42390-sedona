@@ -15,7 +15,7 @@
 
   &__button {
     display: inline-block;
-    padding: 15px 40px;
+    padding: 15px 12.5%;
     text-transform: uppercase;
     color: $link-base;
     background-color: $blue-base;
@@ -23,5 +23,9 @@
     line-height: ($line-height-base + 2);
     font-weight: $font-bold;
     text-decoration: none;
+
+    @media (min-width: $screen-sm-min) {
+      padding: 15px 20.2%;
+    }
   }
 }

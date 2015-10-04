@@ -4,9 +4,14 @@
 
 .map-canvas {
   min-height: 350px;
-  background: url('../img/map--mobile.jpg') no-repeat;
+  background: url('../img/map.jpg') no-repeat;
   background-size: cover;
   position: relative;
+  background-position: -170px 0;
+
+  @media (min-width: $screen-sm-min) {
+    background-position: 0 0;
+  }
 
   &:before {
     content: '';
@@ -16,7 +21,11 @@
     border: 5px solid #fff;
     border-radius: 15px;
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
+
+    @media (min-width: $screen-sm-min) {
+      top: 50%;
+    }
   }
 }

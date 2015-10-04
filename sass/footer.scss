@@ -1,5 +1,14 @@
 .main-footer {
   text-align: center;
+  font-size: 0;
+
+  @media (min-width: $screen-sm-min) {
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 8%;
+    padding-right: 8%;
+  }
 
   &__hashtag {
     text-align: center;
@@ -13,11 +22,17 @@
     margin: $margin-center;
     text-decoration: none;
     margin-bottom: 40px;
+
+    @media (min-width: $screen-sm-min) {
+      display: block;
+      margin: 0;
+    }
   }
 }
 
 .social {
   font-size: 0;
+
 
   &__link {
     display: inline-block;
@@ -52,6 +67,10 @@
   color: #000;
   font-style: normal;
   padding-bottom: 20px;
+
+  @media (min-width: $screen-sm-min) {
+    display: inline-block;
+  }
 
   &__image {
     vertical-align: middle;
