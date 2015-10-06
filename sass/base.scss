@@ -18,11 +18,12 @@ h2 {
 }
 
 .container {
+  margin: 0 auto;
   min-width: $screen-xs-min;
   max-width: $screen-xs-max;
   @media (min-width: $screen-sm-min) {
     min-width: $screen-sm-min;
-    max-width: $screen-md-max;
+    max-width: $screen-sm-max;
   }
 }
 
