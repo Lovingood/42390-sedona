@@ -2,7 +2,7 @@ body {
   font-family: $font-family-base;
   font-size: $font-size-base;
   color: $text-base;
-  min-width: 320px;
+  min-width: $screen-xs-min;
 }
 
 .row {
@@ -18,8 +18,13 @@ h2 {
 }
 
 .container {
-  min-width: 320px;
-  max-width: 460px;
+  margin: 0 auto;
+  min-width: $screen-xs-min;
+  max-width: $screen-xs-max;
+  @media (min-width: $screen-sm-min) {
+    min-width: $screen-sm-min;
+    max-width: $screen-sm-max;
+  }
 }
 
 button {

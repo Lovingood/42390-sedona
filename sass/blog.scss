@@ -1,21 +1,44 @@
 .blog-page {
   padding: $padding-default;
 
+  @media (min-width: $screen-sm-min) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
   &__title {
     @include base_title;
     font-size: $font-size-largest;
+
+    @media (min-width: $screen-sm-min) {
+      width: 100%;
+    }
   }
 
   &__text {
     @include base_text;
     padding-bottom: 20px;
     border-bottom: 2px solid $gray-db;
+
+    @media (min-width: $screen-sm-min) {
+      width: 100%;
+      border-bottom: none;
+    }
   }
 }
 
 .blog-item {
   padding-bottom: 20px;
   border-bottom: 2px solid $gray-db;
+
+  @media (min-width: $screen-sm-min) {
+    width: 45%;
+
+    &:nth-of-type(1), &:nth-of-type(2) {
+      border-top: 2px solid $gray-db;
+    }
+  }
 
   &__title {
     @include base-title;
@@ -30,6 +53,13 @@
 
 .tags {
   display: flex;
+
+  &--post {
+    @media (min-width: $screen-sm-min) {
+      width: ((256% / 768) * 100);
+      margin: 0 auto;
+    }
+  }
 
   &__date {
     @include base_tags;
@@ -70,6 +100,26 @@
   padding-top: 45px;
   margin: 0;
   border-bottom: 2px solid $gray-db;
+
+  @media (min-width: $screen-sm-min) {
+    width: ((500% / 680) * 100);
+    border-bottom: none;
+  }
+
+  &__title {
+    display: none;
+
+    @media (min-width: $screen-sm-min) {
+      display: inline-block;
+      font-size: $font-size-larger;
+      line-height: ($line-height-base + 2);
+      font-weight: $font-bold;
+      color: #000;
+      margin-right: ((65% / 680) * 100);
+      text-transform: uppercase;
+      padding-top: 18px;
+    }
+  }
 
   &__item {
     list-style: none;

@@ -1,3 +1,11 @@
+// Screens
+
+$screen-xs-min:         320px;
+$screen-xs-max:         460px;
+$screen-sm-min:         768px;
+$screen-sm-max:         940px;
+$screen-lg-min:         941px;
+
 // Colors
 
 $gray-base:             #333;
@@ -25,7 +33,8 @@ $font-size-larger:      round($font-size-base * 1.5); // 21px
 $font-size-largest:     round($font-size-base * 2.15); // 30px
 
 $line-height-base:      24px;
-$line-height-large:     round($line-height-base * 1.667); // 40px
+$line-height-large:     $line-height-base * 1.25;
+$line-height-larger:     round($line-height-base * 1.667); // 40px
 $line-height-small:     $line-height-base * 0.875; // 21px
 
 $font-normal:           400;

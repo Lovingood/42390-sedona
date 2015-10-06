@@ -10,6 +10,10 @@
     padding: $padding-default;
     @include base_text;
     padding-bottom: 20px;
+
+    @media (min-width: $screen-sm-min) {
+      padding: 20px ((175% / 768) * 100);
+    }
   }
 }
 
@@ -20,6 +24,11 @@
     padding-top: 35px;
     padding-bottom: 25px;
     margin: 0;
+
+    @media (min-width: $screen-sm-min) {
+      font-size: round( $font-size-base * 2.85 );
+      line-height: round( $line-height-base * 2.08 );
+    }
   }
 
   &__text {
@@ -28,6 +37,11 @@
     font-size: $font-size-large;
     line-height: ($line-height-base + 2);
     text-transform: none;
+
+    @media (min-width: $screen-sm-min) {
+      font-size: round($font-size-base * 1.7);
+      line-height: $line-height-large;
+    }
   }
 }
 
@@ -98,6 +112,10 @@
   justify-content: space-between;
   flex-wrap: wrap;
 
+  @media (min-width: $screen-sm-min) {
+    border: none;
+  }
+
   &__item {
     padding: 15px 35px;
     border: 2px solid $blue-base;
@@ -110,9 +128,24 @@
     text-align: center;
     cursor: pointer;
 
+    @media (min-width: $screen-sm-min) {
+      width: 22%;
+    }
+
     &--full-width {
       width: 100%;
       margin-bottom: 0;
+
+      @media (min-width: $screen-sm-min) {
+        width: 22%;
+        margin-bottom: auto;
+      }
+    }
+
+    &--next {
+      @media (min-width: $screen-sm-min) {
+        order: 1;
+      }
     }
   }
 }

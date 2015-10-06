@@ -9,12 +9,20 @@
     color: #000;
     padding: $padding-default;
     padding-bottom: 35px;
+
+    @media (min-width: $screen-sm-min) {
+      font-size: $font-size-largest;
+    }
   }
 
   &__text {
     @include base_text;
     padding: $padding-default;
     padding-top: 0;
+
+    @media (min-width: $screen-sm-min) {
+      padding: 20px 21%;
+    }
   }
 }
 
@@ -22,20 +30,52 @@
   text-align: center;
   margin-bottom: 110px;
 
+  &__field {
+    @media (min-width: $screen-sm-min) {
+      width: ((176% / 650) * 100);
+    }
+
+    &--full-width {
+      @media (min-width: $screen-sm-min) {
+        width: 100%;
+      }
+    }
+
+    &--info-column {
+      @media (min-width: $screen-sm-min) {
+        width: ((190% / 583) * 100);
+      }
+    }
+  }
+
   &__input-group {
     padding: $padding-default;
     border-bottom: 1px solid $gray-sm-ligher;
     text-align: left;
 
+    @media (min-width: $screen-sm-min) {
+      padding: 20px ( ( 59% / 768 ) * 100);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      border: none;
+    }
+
     &--photo-group {
       border-bottom: none;
       font-size: 0;
+    }
+
+    &--center {
+      @media (min-width: $screen-sm-min) {
+        justify-content: center;
+      }
     }
   }
 
   &__button {
     display: inline-block;
-    padding: 15px 54px;
+    padding: 15px ((54% / 320) * 100);
     text-transform: uppercase;
     color: $link-base;
     background-color: $blue-base;
@@ -44,6 +84,10 @@
     font-weight: $font-bold;
     text-decoration: none;
     border: none;
+
+    @media (min-width: $screen-sm-min) {
+      padding: 15px ((135% / 768) * 100);
+    }
   }
 
   &__title {
@@ -56,6 +100,32 @@
     color: #000;
     padding: $padding-default;
     padding-bottom: 35px;
+
+    @media (min-width: $screen-sm-min) {
+      font-size: $font-size-larger;
+      position: relative;
+      width: 100%;
+
+      &:before {
+        content: '';
+        width: 17.5%;
+        height: 1px;
+        background-color: $gray-db;
+        position: absolute;
+        left: 0;
+        top: 40%;
+      }
+
+      &:after {
+        content: '';
+        width: 17.5%;
+        height: 1px;
+        background-color: $gray-db;
+        position: absolute;
+        right: 0;
+        top: 40%;
+      }
+    }
   }
 
   &__label {
@@ -64,9 +134,22 @@
     text-align: left;
     padding-left: 20px;
     padding-bottom: 10px;
+    cursor: pointer;
+
+    @media (min-width: $screen-sm-min) {
+      margin: 0;
+    }
 
     &--radio {
       display: inline-block;
+
+      @media (min-width: $screen-sm-min) {
+        padding-left: 0;
+        font-weight: $font-bold;
+        font-size: $font-size-large;
+        color: #000;
+        text-transform: none;
+      }
 
       &:before {
         content: '';
@@ -99,11 +182,21 @@
         height: 56px;
       }
     }
+
+    &--without-padding {
+      @media (min-width: $screen-sm-min) {
+        padding-left: 0;
+      }
+    }
   }
 
   &__input {
     @include base_input;
     margin-bottom: 20px;
+
+    @media (min-width: $screen-sm-min) {
+      padding-right: 0;
+    }
 
     &--radio {
       display: none;
@@ -125,6 +218,20 @@
 
     &--number {
       text-align: center;
+
+      @media (min-width: $screen-sm-min) {
+        padding-left: 0;
+      }
+    }
+  }
+
+  &__checkbox {
+    @media (min-width: $screen-sm-min) {
+      width: 35%;
+
+      &:nth-of-type(1) {
+        margin-bottom: 35px;
+      }
     }
   }
 
@@ -142,6 +249,7 @@
 
     & > img {
         display: block;
+        width: 100%;
     }
   }
 
@@ -154,6 +262,23 @@
     width: 30px;
     height: 30px;
     background: url('../img/delete_photo.png') no-repeat;
+
+    @media (min-width: $screen-sm-min) {
+      left: 100%;
+    }
+  }
+
+  &__photo-name {
+    display: none;
+
+    @media (min-width: $screen-sm-min) {
+      display: block;
+      font-size: $font-size-base;
+      color: #000;
+      line-height: ($line-height-base + 2);
+      text-transform: uppercase;
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -175,6 +300,18 @@
     &:last-child {
       float: right;
       margin-right: 0;
+
+      @media (min-width: $screen-sm-min) {
+        display: block;
+        float: left;
+      }
+    }
+
+    @media (min-width: $screen-sm-min) {
+      margin-right: 0;
+      display: block;
+      float: left;
+      width: 25%
     }
   }
 
@@ -183,6 +320,14 @@
     width: 55%;
     display: inline-block;
     margin-bottom: 20px;
+
+    @media (min-width: $screen-sm-min) {
+      width: 50%;
+      padding-right: 0;
+      padding-left: 20px;
+      float: left;
+      box-sizing: border-box;
+    }
   }
 }
 
@@ -190,6 +335,10 @@
   float: left;
   width: 25%;
   box-sizing: border-box;
+
+  @media (min-width: $screen-sm-min) {
+    width: ((61% / 650) * 100);
+  }
 }
 
 .info-column {
@@ -197,4 +346,18 @@
   width: 75%;
   padding-left: 10px;
   box-sizing: border-box;
+
+  @media (min-width: $screen-sm-min) {
+    display: flex;
+    justify-content: space-between;
+    width: ((583% / 650) * 100);
+  }
+}
+
+.person-block {
+  @media (min-width: $screen-sm-min) {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
 }

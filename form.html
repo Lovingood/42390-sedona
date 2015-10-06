@@ -41,14 +41,20 @@
           <div class="form-review__input-group">
             <h2 class="form-review__title">Представьтесь, пожалуйста:</h2>
 
-            <label class="form-review__label" for="surname">Фамилия:</label>
-            <input class="form-review__input" type="text" id="surname" name="surname" value="Иванов">
+            <div class="form-review__field">
+              <label class="form-review__label" for="surname">Фамилия:</label>
+              <input class="form-review__input" type="text" id="surname" name="surname" value="Иванов">
+            </div>
 
-            <label class="form-review__label" for="name">Имя:</label>
-            <input class="form-review__input" type="text" id="name" name="name" value="Петр">
+            <div class="form-review__field">
+              <label class="form-review__label" for="name">Имя:</label>
+              <input class="form-review__input" type="text" id="name" name="name" value="Петр">
+            </div>
 
-            <label class="form-review__label" for="patronymic">Отчество:</label>
-            <input class="form-review__input" type="text" id="patronymic" name="patronymic" value="Александрович">
+            <div class="form-review__field">
+              <label class="form-review__label" for="patronymic">Отчество:</label>
+              <input class="form-review__input" type="text" id="patronymic" name="patronymic" value="Александрович">
+            </div>
           </div>
 
           <div class="form-review__input-group">
@@ -64,70 +70,93 @@
           <div class="form-review__input-group">
             <h2 class="form-review__title">Даты вашей поездки:</h2>
 
-            <label class="form-review__label" for="start-date">Дата приезда:</label>
-            <input class="form-review__input form-review__input--date" type="date" id="start-date" name="start-date">
-
-
-            <label class="form-review__label" for="duration">Длительность пребывания</label>
-
-            <div class="counter">
-              <button class="counter__button"><i class="icon-minus"></i></button>
-              <input class="counter__input" type="text" id="duration" name="duration" placeholder="14 дн.">
-              <button class="counter__button"><i class="icon-plus"></i></button>
+            <div class="form-review__field">
+              <label class="form-review__label" for="start-date">Дата приезда:</label>
+              <input class="form-review__input form-review__input--date" type="date" id="start-date" name="start-date">
             </div>
 
-            <label class="form-review__label" for="end-date">Дата отъезда:</label>
-            <input class="form-review__input form-review__input--date" type="date" id="end-date" name="end-date">
+            <div class="form-review__field">
+              <label class="form-review__label" for="duration">Дней пребывания:</label>
+
+              <div class="row counter">
+                <button class="counter__button"><i class="icon-minus"></i></button>
+                <input class="counter__input" type="text" id="duration" name="duration" placeholder="14">
+                <button class="counter__button"><i class="icon-plus"></i></button>
+              </div>
+            </div>
+
+            <div class="form-review__field">
+              <label class="form-review__label" for="end-date">Дата отъезда:</label>
+              <input class="form-review__input form-review__input--date" type="date" id="end-date" name="end-date">
+            </div>
           </div>
 
-          <div class="form-review__input-group">
+          <div class="form-review__input-group form-review__input-group--center">
             <h2 class="form-review__title">Кол-во путешественников:</h2>
 
-            <label class="form-review__label" for="amount">Количество путешественников:</label>
-            <div class="counter">
-              <button class="counter__button"><i class="icon-minus"></i></button>
-              <input class="counter__input" type="text" id="amount" name="amount" placeholder="2 чел.">
-              <button class="counter__button"><i class="icon-plus"></i></button>
+            <div class="form-review__field">
+              <label class="form-review__label form-review__label--without-padding" for="amount">Кол-во путешественников:</label>
+              <div class="counter">
+                <button class="counter__button"><i class="icon-minus"></i></button>
+                <input class="counter__input" type="text" id="amount" name="amount" placeholder="2 чел.">
+                <button class="counter__button"><i class="icon-plus"></i></button>
+              </div>
             </div>
           </div>
 
           <div class="form-review__input-group">
             <div class="row person-block">
               <div class="number-column">
-                <label class="form-review__label" for="number-1">№</label>
-                <input class="form-review__input form-review__input--number" type="text" id="number-1" value="1">
+                <div class="form-review__field form-review__field--full-width">
+                  <label class="form-review__label" for="number-1">№</label>
+                  <input class="form-review__input form-review__input--number" type="text" id="number-1" value="1">
+                </div>
               </div>
               <div class="info-column">
-                <label class="form-review__label" for="contact-surname">Фамилия:</label>
-                <input class="form-review__input" type="text" id="contact-surname" name="contact-surname" value="Иванов">
+                <div class="form-review__field form-review__field--info-column">
+                  <label class="form-review__label" for="contact-surname">Фамилия:</label>
+                  <input class="form-review__input" type="text" id="contact-surname" name="contact-surname" value="Иванов">
+                </div>
 
-                <label class="form-review__label" for="contact-name">Имя:</label>
-                <input class="form-review__input" type="text" id="contact-name" name="contact-name" value="Петр">
+                <div class="form-review__field form-review__field--info-column">
+                  <label class="form-review__label" for="contact-name">Имя:</label>
+                  <input class="form-review__input" type="text" id="contact-name" name="contact-name" value="Петр">
+                </div>
 
-                <label class="form-review__label" for="contact-patronymic">Отчество:</label>
-                <input class="form-review__input" type="text" id="contact-patronymic" name="contact-patronymic" value="Александрович">
+                <div class="form-review__field form-review__field--info-column">
+                  <label class="form-review__label" for="contact-patronymic">Отчество:</label>
+                  <input class="form-review__input" type="text" id="contact-patronymic" name="contact-patronymic" value="Александрович">
+                </div>
               </div>
             </div>
 
             <div class="row person-block">
               <div class="number-column">
-                <label class="form-review__label" for="number-2">№</label>
-                <input class="form-review__input form-review__input--number" type="text" value="2">
+                <div class="form-review__field form-review__field--full-width">
+                  <label class="form-review__label" for="number-2">№</label>
+                  <input class="form-review__input form-review__input--number" type="text" value="2">
+                </div>
               </div>
               <div class="info-column">
-                <label class="form-review__label" for="contact-surname">Фамилия:</label>
-                <input class="form-review__input" type="text" id="contact-surname" name="contact-surname" value="Иванов">
+                <div class="form-review__field form-review__field--info-column">
+                  <label class="form-review__label" for="contact-surname">Фамилия:</label>
+                  <input class="form-review__input" type="text" id="contact-surname" name="contact-surname" value="Иванов">
+                </div>
 
-                <label class="form-review__label" for="contact-name">Имя:</label>
-                <input class="form-review__input" type="text" id="contact-name" name="contact-name" value="Петр">
+                <div class="form-review__field form-review__field--info-column">
+                  <label class="form-review__label" for="contact-name">Имя:</label>
+                  <input class="form-review__input" type="text" id="contact-name" name="contact-name" value="Петр">
+                </div>
 
-                <label class="form-review__label" for="contact-patronymic">Отчество:</label>
-                <input class="form-review__input" type="text" id="contact-patronymic" name="contact-patronymic" value="Александрович">
+                <div class="form-review__field form-review__field--info-column">
+                  <label class="form-review__label" for="contact-patronymic">Отчество:</label>
+                  <input class="form-review__input" type="text" id="contact-patronymic" name="contact-patronymic" value="Александрович">
+                </div>
               </div>
             </div>
           </div>
 
-          <div class="form-review__input-group">
+          <div class="form-review__input-group form-review__input-group--center">
             <h2 class="form-review__title">Посещенные достопримечательности:</h2>
 
             <div class="form-review__checkbox">
@@ -159,30 +188,37 @@
             <figure class="form-review__photo">
               <a class="form-review__delete-link" href="#">Закрыть</a>
               <img src="img/preview_photo.jpg" alt="">
+              <p class="form-review__photo-name">img-686.jpg</p>
             </figure>
             <figure class="form-review__photo">
               <a class="form-review__delete-link" href="#">Закрыть</a>
               <img src="img/preview_photo.jpg" alt="">
+              <p class="form-review__photo-name">img-686.jpg</p>
             </figure>
             <figure class="form-review__photo">
               <a class="form-review__delete-link" href="#">Закрыть</a>
               <img src="img/preview_photo.jpg" alt="">
+              <p class="form-review__photo-name">img-686.jpg</p>
             </figure>
             <figure class="form-review__photo">
               <a class="form-review__delete-link" href="#">Закрыть</a>
               <img src="img/preview_photo.jpg" alt="">
+              <p class="form-review__photo-name">img-686.jpg</p>
             </figure>
             <figure class="form-review__photo">
               <a class="form-review__delete-link" href="#">Закрыть</a>
               <img src="img/preview_photo.jpg" alt="">
+              <p class="form-review__photo-name">img-686.jpg</p>
             </figure>
             <figure class="form-review__photo">
               <a class="form-review__delete-link" href="#">Закрыть</a>
               <img src="img/preview_photo.jpg" alt="">
+              <p class="form-review__photo-name">img-686.jpg</p>
             </figure>
             <figure class="form-review__photo">
               <a class="form-review__delete-link" href="#">Закрыть</a>
               <img src="img/preview_photo.jpg" alt="">
+              <p class="form-review__photo-name">img-686.jpg</p>
             </figure>
           </div>
 
@@ -199,6 +235,13 @@
           <a class="social__link" href="#">Facebook<i class="icon-facebook"></i></a>
           <a class="social__link" href="#">Youtube<i class="icon-youtube"></i></a>
         </div>
+
+        <address class="author">
+          Разработано
+          <a class="author__link" href="https://htmlacademy.ru">
+            <img class="author__image" src="img/htmlacademy-small.png" height="34" width="27" alt="htmlacademy.ru">
+          </a>
+        </address>
       </footer>
     </div>
   </body>
