@@ -40,6 +40,14 @@
     }
   }
 
+  @media (min-width: $screen-lg-min) {
+    width: 27%;
+
+    &:nth-of-type(3) {
+      border-top: 2px solid $gray-db;
+    }    
+  }
+
   &__title {
     @include base-title;
     font-size: ($font-size-larger + 3);
@@ -106,6 +114,10 @@
     border-bottom: none;
   }
 
+  @media (min-width: $screen-lg-min) {
+    width: ((700% / 1050) * 100);
+  }
+
   &__title {
     display: none;
 
@@ -118,6 +130,11 @@
       margin-right: ((65% / 680) * 100);
       text-transform: uppercase;
       padding-top: 18px;
+    }
+
+    @media (min-width: $screen-lg-min) {
+      margin-left: ((80% / 700) * 100);
+      margin-right: ((180% / 700) * 100);
     }
   }
 
