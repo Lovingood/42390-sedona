@@ -5,7 +5,7 @@
   @media (min-width: $screen-lg-min) {
     padding-left: ((380% / 1200) * 100);
     padding-right: ((380% / 1200) * 100);
-  }  
+  }
 
   &__title {
     @include base_title;
