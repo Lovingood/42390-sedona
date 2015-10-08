@@ -55,41 +55,7 @@
 
     @media (min-width: $screen-sm-min) {
       padding: 20px ( ( 59% / 768 ) * 100);
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
       border: none;
-    }
-
-    &--photo-group {
-      border-bottom: none;
-      font-size: 0;
-    }
-
-    &--amount {
-      @media (min-width: $screen-sm-min) {
-        justify-content: center;
-      }
-
-      @media (min-width: $screen-lg-min) {
-        justify-content: flex-start;
-      }
-    }
-
-    @--checkbox {
-      @media (min-width: $screen-sm-min) {
-        justify-content: center;
-      }
-
-      @media (min-width: $screen-lg-min) {
-        justify-content: space-between;
-      }
-    }
-
-    &--radio {
-      @media (min-width: $screen-lg-min) {
-        justify-content: center;
-      }
     }
   }
 
@@ -129,6 +95,7 @@
       font-size: $font-size-larger;
       position: relative;
       width: 100%;
+      box-sizing: border-box;
 
       &:before {
         content: '';
@@ -299,10 +266,10 @@
 
     @media (min-width: $screen-lg-min) {
       width: ((140% / 1015.620) * 100);
-      margin-right: ((62% / 1015.620) * 100);
+      margin-right: 7.77%;
 
       &:nth-of-type(3n) {
-        margin-right: ((62% / 1200) * 100);
+        margin-right: 7.77%;
       }
 
       &:nth-of-type(5n) {
@@ -364,7 +331,6 @@
         float: left;
       }
     }
-
 
     @media (min-width: $screen-sm-min) {
       margin-right: 0;
