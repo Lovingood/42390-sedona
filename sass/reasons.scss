@@ -1,4 +1,11 @@
 .reasons {
+  &__header {
+    @media (min-width: $screen-lg-min) {
+      padding-top: 20px;
+      padding-bottom: 35px;
+    }
+  }
+
   &__title {
     @include base_title;
     padding: $padding-default;
@@ -23,6 +30,10 @@
       @media (min-width: $screen-sm-min) {
         padding-top: 40px;
         padding-bottom: 40px;
+      }
+
+      @media (min-width: $screen-lg-min) {
+        padding-bottom: 60px;
       }
 
       & .reason__text {
@@ -66,6 +77,12 @@
   &--bg-blue {
     background-color: $blue-base;
     min-height: 256px;
+
+    @media (min-width: $screen-lg-min) {
+      padding-left: ((65% / 1200) * 100);
+      padding-right: ((65% / 1200) * 100);
+      box-sizing: border-box;
+    }
   }
 
   &--mask {
@@ -101,6 +118,10 @@
       padding-top: 155px;
     }
 
+    @media (min-width: $screen-lg-min) {
+      padding-bottom: 85px;
+    }
+
     & .reason__title, .reason__number, .reason__text {
       text-align: left;
       margin: 0;
@@ -110,6 +131,11 @@
         text-align: center;
         padding-left: 21%;
         padding-right: 21%;
+      }
+
+      @media (min-width: $screen-sm-min) {
+        padding-left: ((70% / 1200) * 100);
+        padding-right: ((70% / 1200) * 100);
       }
     }
   }
@@ -186,6 +212,10 @@
       @media (min-width: $screen-sm-min) {
         padding-top: 42px;
       }
+
+      @media (min-width: $screen-sm-min) {
+        padding-top: 55px;
+      }
     }
   }
 
@@ -229,6 +259,11 @@
       @media (min-width: $screen-sm-min) {
         padding-left: 18%;
         padding-right: 18%;
+      }
+
+      @media (min-width: $screen-lg-min) {
+        padding-left: 0;
+        padding-right: 0;
       }
     }
   }

@@ -3,6 +3,10 @@ body {
   font-size: $font-size-base;
   color: $text-base;
   min-width: $screen-xs-min;
+
+  @media (min-width: $screen-lg-min) {
+    background-color: #efefef;
+  }
 }
 
 .row {
@@ -21,9 +25,51 @@ h2 {
   margin: 0 auto;
   min-width: $screen-xs-min;
   max-width: $screen-xs-max;
+  background-color: #fff;
+  box-shadow: 5px 0px 10px 0px rgba(0, 0, 0, 0.1), -5px 0px 10px 0px rgba(0, 0, 0, 0.1);
   @media (min-width: $screen-sm-min) {
     min-width: $screen-sm-min;
-    max-width: $screen-sm-max;
+    max-width: $screen-lg-max;
+  }
+}
+
+.flexbox {
+  @media (min-width: $screen-sm-min) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &--photo-group {
+      border-bottom: none;
+      font-size: 0;
+      justify-content: flex-start;
+    }
+
+    &--amount {
+      @media (min-width: $screen-sm-min) {
+        justify-content: center;
+      }
+
+      @media (min-width: $screen-lg-min) {
+        justify-content: flex-start;
+      }
+    }
+
+    @--checkbox {
+      @media (min-width: $screen-sm-min) {
+        justify-content: center;
+      }
+
+      @media (min-width: $screen-lg-min) {
+        justify-content: space-between;
+      }
+    }
+
+    &--radio {
+      @media (min-width: $screen-lg-min) {
+        justify-content: center;
+      }
+    }
   }
 }
 

@@ -4,6 +4,10 @@
     padding: $padding-default;
     @include base_title;
     font-size: $font-size-largest;
+
+    @media (min-width: $screen-lg-min) {
+      padding-top: 70px;
+    }
   }
 
   &__text {
@@ -13,6 +17,10 @@
 
     @media (min-width: $screen-sm-min) {
       padding: 20px ((175% / 768) * 100);
+    }
+
+    @media (min-width: $screen-lg-min) {
+      padding-bottom: 45px;
     }
   }
 }
@@ -49,6 +57,10 @@
   padding: $padding-default;
   padding-top: 0;
   padding-bottom: 35px;
+
+  @media (min-width: $screen-lg-min) {
+    padding: 20px ((200% / 1200) * 100);
+  }
 
   & h2 {
     @include base_title;
@@ -114,6 +126,10 @@
 
   @media (min-width: $screen-sm-min) {
     border: none;
+  }
+
+  @media (min-width: $screen-lg-min) {
+    padding: 45px ((200% / 1200) * 100);
   }
 
   &__item {

@@ -55,21 +55,7 @@
 
     @media (min-width: $screen-sm-min) {
       padding: 20px ( ( 59% / 768 ) * 100);
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
       border: none;
-    }
-
-    &--photo-group {
-      border-bottom: none;
-      font-size: 0;
-    }
-
-    &--center {
-      @media (min-width: $screen-sm-min) {
-        justify-content: center;
-      }
     }
   }
 
@@ -88,6 +74,10 @@
     @media (min-width: $screen-sm-min) {
       padding: 15px ((135% / 768) * 100);
     }
+
+    @media (min-width: $screen-lg-min) {
+      padding: 15px ((135% / 1200) * 100);
+    }
   }
 
   &__title {
@@ -105,6 +95,7 @@
       font-size: $font-size-larger;
       position: relative;
       width: 100%;
+      box-sizing: border-box;
 
       &:before {
         content: '';
@@ -138,6 +129,12 @@
 
     @media (min-width: $screen-sm-min) {
       margin: 0;
+    }
+
+    &--margin-right {
+      @media (min-width: $screen-lg-min) {
+        margin-right: 10%;
+      }
     }
 
     &--radio {
@@ -181,6 +178,10 @@
         width: 56px;
         height: 56px;
       }
+
+      @media (min-width: $screen-lg-min) {
+        padding-left: 0;
+      }
     }
 
     &--without-padding {
@@ -223,6 +224,13 @@
         padding-left: 0;
       }
     }
+
+    &--file {
+      @media (min-width: $screen-lg-min) {
+        background-color: $blue-base;
+        color: #fff;
+      }
+    }
   }
 
   &__checkbox {
@@ -232,6 +240,10 @@
       &:nth-of-type(1) {
         margin-bottom: 35px;
       }
+    }
+
+    @media (min-width: $screen-sm-min) {
+      width: auto;
     }
   }
 
@@ -250,6 +262,19 @@
     & > img {
         display: block;
         width: 100%;
+    }
+
+    @media (min-width: $screen-lg-min) {
+      width: ((140% / 1015.620) * 100);
+      margin-right: 7.77%;
+
+      &:nth-of-type(3n) {
+        margin-right: 7.77%;
+      }
+
+      &:nth-of-type(5n) {
+        margin-right: 0;
+      }
     }
   }
 
@@ -313,6 +338,10 @@
       float: left;
       width: 25%
     }
+
+    @media (min-width: $screen-lg-min) {
+      margin-right: 3%;
+    }
   }
 
   &__input {
@@ -327,6 +356,11 @@
       padding-left: 20px;
       float: left;
       box-sizing: border-box;
+    }
+
+    @media (min-width: $screen-lg-min) {
+      width: 44%;
+      margin-right: 3%;
     }
   }
 }
