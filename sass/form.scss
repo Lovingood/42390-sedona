@@ -90,7 +90,7 @@
     &:active {
       background-color: $blue-darkest;
       color: rgba(255, 255, 255, 0.3);
-    }    
+    }
   }
 
   &__title {
@@ -220,7 +220,7 @@
         &:before {
           background-color: #d5d5d5;
         }
-      }      
+      }
     }
 
     &--without-padding {
@@ -373,7 +373,7 @@
       background-color: $gray-sm-ligher;
 
       & .form-review__delete-img {
-        fill: rgba(51, 51, 51, 0.3);  
+        fill: rgba(51, 51, 51, 0.3);
       }
     }
 
@@ -391,10 +391,10 @@
     height: 13px;
     fill: rgba(51, 51, 51, 0.3);
     margin: 0 auto;
-    
+
     @media (min-width: $screen-sm-min) {
       width: 23px;
-      height: 23px;      
+      height: 23px;
     }
   }
 
@@ -493,7 +493,7 @@
     &:active, &:focus {
       background-color: #fff;
       outline: 4px solid #e2e2e2;
-    }    
+    }
   }
 }
 

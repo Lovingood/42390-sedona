@@ -7,7 +7,7 @@
   transform: translateX(-50%);
   box-shadow: 0 5px 15px 0 $gray-999;
   background-color: #fff;
-  
+
   &--success {
     display: none;
   }
@@ -67,7 +67,7 @@
     &:active {
       background-color: $blue-darkest;
       color: rgba(255, 255, 255, 0.3);
-    }    
+    }
   }
 
   &__title {
@@ -88,5 +88,5 @@
     @include base_text;
     padding: 20px 17%;
     padding-top: 0;
-  }  
+  }
 }
