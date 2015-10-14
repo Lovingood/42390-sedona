@@ -35,6 +35,15 @@
     padding: 15px 0 15px 0;
     box-shadow: 0 -1px 0 0px $blue-light, 0 -2px 0 0px $blue-dark;
 
+    &:hover, &:focus {
+      background-color: $blue-darker;
+    }
+
+    &:active {
+      background-color: $blue-darkest;
+      color: rgba(255, 255, 255, 0.3);
+    }
+
     @media (min-width: $screen-sm-min) {
       width: 20%;
       background-color: #fff;
@@ -42,6 +51,25 @@
       box-shadow: none;
       font-size: $font-size-base;
       padding: 8px 0 8px 0;
+
+      &:hover, &:focus {
+        color: $blue-base;
+        background-color: #fff;
+      }
+
+      &:active {
+        background-color: #fff;
+        color: rgba(0, 0, 0, 0.3);
+      }
+
+      &--active {
+        color: $brown-base;
+
+        &:hover, &:focus {
+          color: $brown-dark;
+          background-color: #fff;
+        }
+      }
     }
 
     &:nth-of-type(2) {
@@ -50,7 +78,6 @@
       }
     }
   }
-
 
   &__close {
     position: absolute;
@@ -65,28 +92,6 @@
       display: none;
     }
 
-    &:before {
-      content: '';
-      width: 100%;
-      height: 3px;
-      display: block;
-      background-color: #fff;
-      position: absolute;
-      transform: rotate(-45deg);
-      left: -0.3px;
-    }
-
-    &:after {
-      content: '';
-      width: 100%;
-      height: 3px;
-      display: block;
-      background-color: #fff;
-      position: absolute;
-      transform: rotate(45deg);
-      left: 0.3px;
-    }
-
     &:hover, &:focus {
       outline: none;
     }
@@ -96,8 +101,8 @@
 .top-row {
   position: relative;
   padding-right: 20px;
-  padding-top: 28px;
-  padding-bottom: 28px;
+  padding-top: 18px;
+  padding-bottom: 18px;
   @media (min-width: $screen-sm-min) {
     position: absolute;
     padding: 0;
@@ -111,7 +116,16 @@
     margin: 0;
     left: 50%;
     transform: translateX(-50%);
+    width: 140px;
     z-index: 1;
+    text-align: center;
+  }
+
+  &__logo-img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 
@@ -119,76 +133,115 @@
   float: right;
   font-size: 0;
   border: none;
-  height: 1px;
-  width: 23px;
-  background-color: $blue-base;
+  height: 25px;
+  background-color: #fff;
+  width: 25px;
   position: relative;
   @media (min-width: $screen-sm-min) {
     display: none;
   }
 
-  &:before, &:after {
-    content: '';
-    position: absolute;
-    display: block;
-    height: 5px;
-    width: 23px;
-    background-color: $blue-base;
-    left: 0;
-  }
-
-  &:before {
-    top: -9px;
-  }
-
-  &:after {
-    bottom: -9px;
-  }
 }
 
 .main-promo {
-  padding-top: 35px;
-  padding-bottom: 35px;
+  padding-top: 45px;
+  padding-bottom: 45px;
   text-align: center;
   background: url('../img/photo-background@1x.jpg') no-repeat;
   background-size: cover;
   background-position: center top;
   position: relative;
+  overflow: hidden;
+
   @media (min-width: $screen-sm-min) {
-    padding-top: 70px;
+    padding-top: 75px;
     padding-bottom: 80px;
   }
 
   &--short {
-    background-position: 0px -120px;
-    padding-bottom: 75px;
-    padding-top: 40px;
-
-    @media (min-width: $screen-sm-min) {
-      min-height: 295px;
-      box-sizing: border-box;
-    }
+    padding-top: 100px;
+    padding-bottom: 120px;
   }
 
-  &:after {
-    content: '';
-    min-height: 37px;
-    display: block;
-    width: 100%;
-    background: url('../img/mask-mobile.png') no-repeat;
-    background-size: 100% 37px;
-    margin-top: 71px;
-    bottom: -1px;
+  &__mask {
     position: absolute;
+    bottom: -1px;
+    left: -50%;
+    width: 200%;
 
     @media (min-width: $screen-sm-min) {
-      background: url('../img/mask.png') no-repeat;
-      background-size: 100% 57px;
-      min-height: 57px;
+      left: 0;
+      width: 100%;
     }
   }
 
   &__image {
+    display: block;
     margin: $margin-center;
+
+    &--welcome {
+      width: ((140% / 320) * 100);
+      fill: $blue-base;
+      margin-bottom: 8px;
+
+      @media (min-width: $screen-sm-min) {
+        width: ((180% / 768) * 100);
+      }
+
+      @media (min-width: $screen-lg-min) {
+        width: ((186% / 1200) * 100);
+      }
+    }
+
+    &--tothegorgerous {
+      width: ((196% / 320) * 100);
+      fill: $brown-base;
+      margin-bottom: 60px;
+
+      @media (min-width: $screen-sm-min) {
+        width: ((256% / 768) * 100);
+        margin-bottom: 50px;
+      }
+
+      @media (min-width: $screen-lg-min) {
+        width: ((256% / 1200) * 100);
+      }
+    }
+
+    &--sedona {
+      width: ((280% / 320) * 100);
+      fill: #fff;
+      margin-bottom: 70px;
+
+      @media (min-width: $screen-sm-min) {
+        width: ((457% / 768) * 100);
+        margin-bottom: 60px;
+      }
+
+      @media (min-width: $screen-lg-min) {
+        width: ((457% / 1200) * 100);
+      }
+    }
+
+    &--becausecanyon {
+      width: ((198% / 320) * 100);
+      fill: #fff;
+
+      @media (min-width: $screen-sm-min) {
+        width: ((296% / 768) * 100);
+      }
+
+      @media (min-width: $screen-lg-min) {
+        width: ((296% / 1200) * 100);
+      }
+    }
+
+    &--hidden {
+      display: none;
+    }
+
+    &--one {
+      margin-bottom: 0;
+    }    
   }
 }

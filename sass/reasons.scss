@@ -24,6 +24,10 @@
   }
 
   &__row {
+    &--image {
+      padding-top: 40px;
+    }
+
     &--bg-gray {
       background-color: $gray-lighter;
 
@@ -76,7 +80,10 @@
 
   &--bg-blue {
     background-color: $blue-base;
-    min-height: 256px;
+    
+    @media (min-width: $screen-sm-min) {
+      min-height: 256px;  
+    }
 
     @media (min-width: $screen-lg-min) {
       padding-left: ((65% / 1200) * 100);
@@ -110,7 +117,7 @@
   }
 
   &--image {
-    padding-left: 50px;
+    padding-left: ((50% / 320) * 100);
     position: relative;
 
     @media (min-width: $screen-sm-min) {
@@ -136,67 +143,6 @@
       @media (min-width: $screen-sm-min) {
         padding-left: ((70% / 1200) * 100);
         padding-right: ((70% / 1200) * 100);
-      }
-    }
-  }
-
-  &--icon-home, &--icon-burger, &--icon-gift {
-    &:before {
-      content: '';
-      width: 37px;
-      height: 37px;
-      position: absolute;
-      left: 20px;
-      top: 30px;
-
-      @media (min-width: $screen-sm-min) {
-        top: 60px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 75px;
-        height: 75px;
-      }
-    }
-  }
-
-  &--icon-home {
-    &:before {
-      background: url('../img/home.png') no-repeat;
-      background-size: cover;
-      width: 37px;
-      height: 37px;
-
-      @media (min-width: $screen-sm-min) {
-        width: 75px;
-        height: 75px;
-      }
-    }
-  }
-
-  &--icon-burger {
-    &:before {
-      background: url('../img/hamburger.png') no-repeat;
-      background-size: cover;
-      width: 39px;
-      height: 37px;
-
-      @media (min-width: $screen-sm-min) {
-        width: 78px;
-        height: 75px;
-      }
-    }
-  }
-
-  &--icon-gift {
-    &:before {
-      background: url('../img/gift.png') no-repeat;
-      background-size: cover;
-      width: 37px;
-      height: 43px;
-
-      @media (min-width: $screen-sm-min) {
-        width: 62px;
-        height: 75px;
       }
     }
   }
@@ -273,11 +219,27 @@
       padding-bottom: 35px;
     }
   }
+
+  &__image {
+    position: absolute;
+    width: 40px;
+    fill: $blue-base;
+    left: ((20% / 320) * 100);
+    top: 25%;
+    transform: translateY(-50%);
+
+    @media (min-width: $screen-sm-min) {
+      width: 72px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
 }
 
 .reason-picture {
   margin: 0;
   min-height: 256px;
+  max-height: 256px;
   overflow: hidden;
 
   @media (min-width: $screen-sm-min) {
@@ -287,7 +249,7 @@
 
   &__image {
     width: 800px;
-    height: 256px;
+    max-height: 256px;
     display: block;
   }
 }

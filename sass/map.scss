@@ -7,25 +7,15 @@
   background: url('../img/map.jpg') no-repeat;
   background-size: cover;
   position: relative;
-  background-position: -170px 0;
+  background-position: -400px 0;
 
   @media (min-width: $screen-sm-min) {
     background-position: 0 0;
   }
 
-  &:before {
-    content: '';
-    width: 15px;
-    height: 15px;
-    background-color: $blue-base;
-    border: 5px solid #fff;
-    border-radius: 15px;
+  &__point {
     position: absolute;
-    top: 40%;
+    top: 50%;
     left: 50%;
-
-    @media (min-width: $screen-sm-min) {
-      top: 50%;
-    }
   }
 }

@@ -145,7 +145,19 @@
     cursor: pointer;
 
     @media (min-width: $screen-sm-min) {
-      width: 22%;
+      width: 20%;
+    }
+
+    &:hover {
+      background-color: $blue-darker;
+      color: #fff;
+      border-color: $blue-darker;
+    }
+
+    &:active {
+      background-color: $blue-darkest;
+      color: rgba(255, 255, 255, 0.3);
+      border-color: $blue-darkest;
     }
 
     &--full-width {
@@ -153,7 +165,7 @@
       margin-bottom: 0;
 
       @media (min-width: $screen-sm-min) {
-        width: 22%;
+        width: 26%;
         margin-bottom: auto;
       }
     }
