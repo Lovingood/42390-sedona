@@ -34,14 +34,13 @@
           <svg class="top-row__logo-bg" width="137px" height="70.778px" viewBox="0 0 137 70.778" xml:space="preserve">
             <path fill="#81b3d2" d="M137,0h-14.173H14.173H0l31.279,35.161l0,0l27.8,31.249c5.182,5.824,13.66,5.824,18.842,0l27.8-31.249l0,0L137,0z"/>
           </svg>
-
-          <img
-          class="top-row__logo-img"
-          src="img/logo-sedona@1x.png"
-          srcset="img/logo-sedona@2x.png 2x,
-          img/logo-sedona@3x.png 3x"
-          height="56" width="67" alt="Logo Sedona"
-          >
+          
+          <picture class="top-row__logo-img">
+            <source srcset="img/logo-sedona@1x.png 1x">  
+            <source srcset="img/logo-sedona@2x.png 2x">
+            <source srcset="img/logo-sedona@3x.png 3x">
+            <img class="top-row__logo-img" src="img/logo-sedona@1x.png" height="56" width="67" alt="Logo Sedona">
+          </picture>
         </a>
 
 
@@ -370,11 +369,11 @@
         <figure class="reason-picture">
           <picture class="reason-picture__image">
             <source srcset="img/photo-city@1x.jpg 1x">
-              <source srcset="img/photo-city@2x.jpg 2x">
-                <img class="reason-picture__image" src="img/photo-city@1x.jpg"  width="800" height="256" alt="">
-              </picture>
-            </figure>
-          </div>
+            <source srcset="img/photo-city@2x.jpg 2x">
+            <img class="reason-picture__image" src="img/photo-city@1x.jpg"  width="800" height="400" alt="Sedona City">
+          </picture>
+        </figure>
+      </div>
 
           <div class="row reasons__row reasons__row--image">
 
@@ -467,7 +466,7 @@
               <picture class="reason-picture__image">
                 <source srcset="img/photo-bridge@1x.jpg 1x">
                   <source srcset="img/photo-bridge@2x.jpg 2x">
-                    <img class="reason-picture__image" src="img/photo-bridge@1x.jpg"  width="800" height="256" alt="">
+                    <img class="reason-picture__image" src="img/photo-bridge@1x.jpg" width="800" height="400" alt="Sedona Bridge">
                   </picture>
                 </figure>
               </div>

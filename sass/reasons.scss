@@ -83,6 +83,7 @@
 
     @media (min-width: $screen-sm-min) {
       min-height: 256px;
+      max-height: 256px;
     }
 
     @media (min-width: $screen-lg-min) {
@@ -249,7 +250,7 @@
 
   &__image {
     width: 800px;
-    max-height: 256px;
     display: block;
+    transform: translateY(-10%);
   }
 }
