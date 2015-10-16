@@ -38,5 +38,23 @@
     @media (min-width: $screen-sm-min) {
       padding: 15px 20.2%;
     }
+
+    &:hover {
+      background-color: $blue-darker;
+    }
+
+    &:active {
+      background-color: $blue-darkest;
+      color: rgba(255, 255, 255, 0.3);
+    }
+
+    &--disabled {
+      background-color: $gray-sm-ligher;
+
+      &:hover, &:focus, &:active {
+        bacgkround-color: $gray-sm-ligher;
+        color: #fff;
+      }
+    }
   }
 }

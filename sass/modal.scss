@@ -1,0 +1,92 @@
+.modal {
+  position: fixed;
+  width: 640px;
+  padding-top: 40px;
+  top: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 5px 15px 0 $gray-999;
+  background-color: #fff;
+
+  &--success {
+    display: none;
+  }
+
+  &--failure {
+    display: none;
+    width: 400px;
+    text-align: center;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-bottom: 45px;
+    box-sizing: border-box;
+
+    & .modal__title {
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+
+    & .modal__text {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  &__bottom {
+    background-color: $gray-lighten;
+    padding-top: 45px;
+    padding-bottom: 45px;
+    text-align: center;
+  }
+
+  &__button {
+    display: inline-block;
+    padding: 15px 150px;
+    text-transform: uppercase;
+    color: $link-base;
+    background-color: $blue-base;
+    font-size: $font-size-larger;
+    line-height: ($line-height-base + 2);
+    font-weight: $font-bold;
+    text-decoration: none;
+
+    &--ok {
+      width: 100%;
+      display: block;
+      margin: 0 auto;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    &:hover {
+      background-color: $blue-darker;
+    }
+
+    &:active {
+      background-color: $blue-darkest;
+      color: rgba(255, 255, 255, 0.3);
+    }
+  }
+
+  &__title {
+    text-align: center;
+    font-family: $font-family-base;
+    font-size: $font-size-large;
+    line-height: ($line-height-base + 2);
+    font-weight: $font-bold;
+    text-transform: uppercase;
+    color: #000;
+
+    @media (min-width: $screen-sm-min) {
+      font-size: $font-size-largest;
+    }
+  }
+
+  &__text {
+    @include base_text;
+    padding: 20px 17%;
+    padding-top: 0;
+  }
+}

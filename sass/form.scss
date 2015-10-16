@@ -57,6 +57,10 @@
       padding: 20px ( ( 59% / 768 ) * 100);
       border: none;
     }
+
+    &--photo-group {
+      border-bottom: none;
+    }
   }
 
   &__button {
@@ -77,6 +81,15 @@
 
     @media (min-width: $screen-lg-min) {
       padding: 15px ((135% / 1200) * 100);
+    }
+
+    &:hover {
+      background-color: $blue-darker;
+    }
+
+    &:active {
+      background-color: $blue-darkest;
+      color: rgba(255, 255, 255, 0.3);
     }
   }
 
@@ -159,6 +172,20 @@
         margin-right: 20px;
         vertical-align: middle;
       }
+
+      &:hover, &:focus {
+        &:before {
+          background-color: $gray-sm-ligher;
+          border: 15px solid $gray-sm-ligher;
+        }
+      }
+
+      &:active {
+        &:before {
+          background-color: #a4a4a4;
+          border: 15px solid #d5d5d5;
+        }
+      }
     }
 
     &--checkbox {
@@ -182,6 +209,18 @@
       @media (min-width: $screen-lg-min) {
         padding-left: 0;
       }
+
+      &:hover, &:focus {
+        &:before {
+          background-color: $gray-sm-ligher;
+        }
+      }
+
+      &:active {
+        &:before {
+          background-color: #d5d5d5;
+        }
+      }
     }
 
     &--without-padding {
@@ -199,10 +238,19 @@
       padding-right: 0;
     }
 
+    &:hover {
+      background-color: #e2e2e2;
+    }
+
+    &:active, &:focus {
+      background-color: #fff;
+      outline: 4px solid #e2e2e2;
+    }
+
     &--radio {
       display: none;
 
-      &:checked + .form-review__label::before {
+      &:checked + .form-review__label:before {
         background-color: $gray-base;
       }
     }
@@ -210,10 +258,19 @@
     &--checkbox {
       display: none;
 
-      &:checked + .form-review__label::before {
+      &:checked + .form-review__label:before {
         background: url('../img/check.png') no-repeat;
         background-color: $gray-lighten;
         background-position: center;
+      }
+
+      &:checked + .form-review__label:focus:before, &:checked + .form-review__label:hover:before {
+        background-color: $gray-sm-ligher;
+      }
+
+      &:checked + .form-review__label:active:before {
+        background-color: #d5d5d5;
+        fill: rgba(51, 51, 51, 0.3);
       }
     }
 
@@ -229,6 +286,17 @@
       @media (min-width: $screen-lg-min) {
         background-color: $blue-base;
         color: #fff;
+      }
+
+      &:hover, &:focus {
+        background-color: $blue-darker;
+        outline: none;
+      }
+
+      &:active {
+        background-color: $blue-darkest;
+        color: rgba(255, 255, 255, 0.3);
+        outline: none;
       }
     }
   }
@@ -286,10 +354,47 @@
     font-size: 0;
     width: 30px;
     height: 30px;
-    background: url('../img/delete_photo.png') no-repeat;
+    text-align: center;
+    border-radius: 15px;
+    background-color: $gray-lighten;
+    padding-top: 9px;
+    box-sizing: border-box;
 
     @media (min-width: $screen-sm-min) {
       left: 100%;
+      top: -30px;
+      width: 60px;
+      height: 60px;
+      padding-top: 17px;
+      border-radius: 30px;
+    }
+
+    &:hover {
+      background-color: $gray-sm-ligher;
+
+      & .form-review__delete-img {
+        fill: rgba(51, 51, 51, 0.3);
+      }
+    }
+
+    &:active {
+      background-color: #d5d5d5;
+
+      & .form-review__delete-img {
+        fill: rgba(51, 51, 51, 0.1);
+      }
+    }
+  }
+
+  &__delete-img {
+    width: 13px;
+    height: 13px;
+    fill: rgba(51, 51, 51, 0.3);
+    margin: 0 auto;
+
+    @media (min-width: $screen-sm-min) {
+      width: 23px;
+      height: 23px;
     }
   }
 
@@ -311,16 +416,34 @@
   font-size: 0;
   text-align: center;
 
+  &__image {
+    display: block;
+    margin: 0 auto;
+    padding-top: 4px;
+  }
+
   &__button {
     width: 60px;
     color: rgba(51, 51, 51, 0.3);
+    fill: rgba(51, 51, 51, 0.3);
     border: none;
     background-color: $gray-lighten;
     height: 66px;
     font-size: $font-size-larger;
     float: left;
     vertical-align: middle;
-    padding-top: 5px;
+
+    &:hover, &:focus {
+      background-color: $gray-sm-ligher;
+    }
+
+    &:active {
+      background-color: #d5d5d5;
+
+      & .counter__image {
+        fill: rgba(51, 51, 51, 0.1);
+      }
+    }
 
     &:last-child {
       float: right;
@@ -361,6 +484,15 @@
     @media (min-width: $screen-lg-min) {
       width: 44%;
       margin-right: 3%;
+    }
+
+    &:hover {
+      background-color: #e2e2e2;
+    }
+
+    &:active, &:focus {
+      background-color: #fff;
+      outline: 4px solid #e2e2e2;
     }
   }
 }
