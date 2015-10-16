@@ -403,15 +403,16 @@
               <label class="form-review__label" for="duration">Дней пребывания:</label>
 
               <div class="row counter">
-                <button class="counter__button">
+                <button class="counter__button counter__button--minus">
                   <svg class="counter__image counter__image--minus" width="20px" height="4px" viewBox="0 0 9.917 1.917" preserveAspectRatio="none">
                     <rect width="9.917" height="1.917"/>
                   </svg>
                 </button>
 
-                <input class="counter__input" type="text" id="duration" name="duration" placeholder="14">
+                <input class="counter__input" type="text" id="duration" name="duration" value="14">
+                <span class="counter__label">дн.</span>
 
-                <button class="counter__button">
+                <button class="counter__button counter__button--plus">
                   <svg class="counter__image counter__image--plus" width="20px" height="20px" viewBox="0 0 9.917 9.917">
                     <polygon points="9.917,4 5.917,4 5.917,0 4,0 4,4 0,4 0,5.917 4,5.917 4,9.917 5.917,9.917 5.917,5.917 9.917,5.917 "/>
                   </svg>
@@ -421,7 +422,7 @@
 
             <div class="form-review__field">
               <label class="form-review__label" for="end-date">Дата отъезда:</label>
-              <input class="form-review__input form-review__input--date" type="date" id="end-date" name="end-date">
+              <input class="form-review__input form-review__input--date" type="date" id="end-date" name="end-date" disabled>
             </div>
           </div>
         </div>
@@ -432,16 +433,17 @@
           <div class="flexbox flexbox--amount">
             <div class="form-review__field">
               <label class="form-review__label form-review__label--without-padding" for="amount">Кол-во путешественников:</label>
-              <div class="counter">
-                <button class="counter__button">
+              <div class="row counter">
+                <button class="counter__button counter__button--minus">
                   <svg class="counter__image counter__image--minus" width="20px" height="4px" viewBox="0 0 9.917 1.917" preserveAspectRatio="none">
                     <rect width="9.917" height="1.917"/>
                   </svg>
                 </button>
 
-                <input class="counter__input" type="text" id="amount" name="amount" placeholder="2 чел.">
+                <input class="counter__input" type="text" id="amount" name="amount" value="2">
+                <span class="counter__label">чел.</span>
 
-                <button class="counter__button">
+                <button class="counter__button counter__button--plus">
                   <svg class="counter__image counter__image--plus" width="20px" height="20px" viewBox="0 0 9.917 9.917">
                     <polygon points="9.917,4 5.917,4 5.917,0 4,0 4,4 0,4 0,5.917 4,5.917 4,9.917 5.917,9.917 5.917,5.917 9.917,5.917 "/>
                   </svg>
@@ -534,92 +536,90 @@
 
           <input class="form-review__input form-review__input--file" type="file" placeholder="Выбрать фотографии"></input>
 
-          <div class="flexbox flexbox--photo-group">
-            <figure class="form-review__photo">
-              <a class="form-review__delete-link" href="#">
-                <svg class="form-review__delete-img" width="22.199px" height="22.199px" viewBox="0 0 22.199 22.199">
-                  <polygon points="22.199,2.804 19.396,0 11.1,8.297 2.804,0 0,2.803 8.297,11.1 0,19.396 2.803,22.199 11.1,13.902 19.396,22.199
-                  22.199,19.396 13.903,11.1 "/>
-                </svg>
+          <figure class="form-review__photo">
+            <a class="form-review__delete-link" href="#">
+              <svg class="form-review__delete-img" width="22.199px" height="22.199px" viewBox="0 0 22.199 22.199">
+                <polygon points="22.199,2.804 19.396,0 11.1,8.297 2.804,0 0,2.803 8.297,11.1 0,19.396 2.803,22.199 11.1,13.902 19.396,22.199
+                22.199,19.396 13.903,11.1 "/>
+              </svg>
 
-                Закрыть
-              </a>
-              <img src="img/preview_photo.jpg" alt="">
-              <p class="form-review__photo-name">img-686.jpg</p>
-            </figure>
-            <figure class="form-review__photo">
-              <a class="form-review__delete-link" href="#">
-                <svg class="form-review__delete-img" width="22.199px" height="22.199px" viewBox="0 0 22.199 22.199">
-                  <polygon points="22.199,2.804 19.396,0 11.1,8.297 2.804,0 0,2.803 8.297,11.1 0,19.396 2.803,22.199 11.1,13.902 19.396,22.199
-                  22.199,19.396 13.903,11.1 "/>
-                </svg>
+              Закрыть
+            </a>
+            <img src="img/preview_photo.jpg" alt="">
+            <p class="form-review__photo-name">img-686.jpg</p>
+          </figure>
+          <figure class="form-review__photo">
+            <a class="form-review__delete-link" href="#">
+              <svg class="form-review__delete-img" width="22.199px" height="22.199px" viewBox="0 0 22.199 22.199">
+                <polygon points="22.199,2.804 19.396,0 11.1,8.297 2.804,0 0,2.803 8.297,11.1 0,19.396 2.803,22.199 11.1,13.902 19.396,22.199
+                22.199,19.396 13.903,11.1 "/>
+              </svg>
 
-                Закрыть
-              </a>
-              <img src="img/preview_photo.jpg" alt="">
-              <p class="form-review__photo-name">img-686.jpg</p>
-            </figure>
-            <figure class="form-review__photo">
-              <a class="form-review__delete-link" href="#">
-                <svg class="form-review__delete-img" width="22.199px" height="22.199px" viewBox="0 0 22.199 22.199">
-                  <polygon points="22.199,2.804 19.396,0 11.1,8.297 2.804,0 0,2.803 8.297,11.1 0,19.396 2.803,22.199 11.1,13.902 19.396,22.199
-                  22.199,19.396 13.903,11.1 "/>
-                </svg>
+              Закрыть
+            </a>
+            <img src="img/preview_photo.jpg" alt="">
+            <p class="form-review__photo-name">img-686.jpg</p>
+          </figure>
+          <figure class="form-review__photo">
+            <a class="form-review__delete-link" href="#">
+              <svg class="form-review__delete-img" width="22.199px" height="22.199px" viewBox="0 0 22.199 22.199">
+                <polygon points="22.199,2.804 19.396,0 11.1,8.297 2.804,0 0,2.803 8.297,11.1 0,19.396 2.803,22.199 11.1,13.902 19.396,22.199
+                22.199,19.396 13.903,11.1 "/>
+              </svg>
 
-                Закрыть
-              </a>
-              <img src="img/preview_photo.jpg" alt="">
-              <p class="form-review__photo-name">img-686.jpg</p>
-            </figure>
-            <figure class="form-review__photo">
-              <a class="form-review__delete-link" href="#">
-                <svg class="form-review__delete-img" width="22.199px" height="22.199px" viewBox="0 0 22.199 22.199">
-                  <polygon points="22.199,2.804 19.396,0 11.1,8.297 2.804,0 0,2.803 8.297,11.1 0,19.396 2.803,22.199 11.1,13.902 19.396,22.199
-                  22.199,19.396 13.903,11.1 "/>
-                </svg>
+              Закрыть
+            </a>
+            <img src="img/preview_photo.jpg" alt="">
+            <p class="form-review__photo-name">img-686.jpg</p>
+          </figure>
+          <figure class="form-review__photo">
+            <a class="form-review__delete-link" href="#">
+              <svg class="form-review__delete-img" width="22.199px" height="22.199px" viewBox="0 0 22.199 22.199">
+                <polygon points="22.199,2.804 19.396,0 11.1,8.297 2.804,0 0,2.803 8.297,11.1 0,19.396 2.803,22.199 11.1,13.902 19.396,22.199
+                22.199,19.396 13.903,11.1 "/>
+              </svg>
 
-                Закрыть
-              </a>
-              <img src="img/preview_photo.jpg" alt="">
-              <p class="form-review__photo-name">img-686.jpg</p>
-            </figure>
-            <figure class="form-review__photo">
-              <a class="form-review__delete-link" href="#">
-                <svg class="form-review__delete-img" width="22.199px" height="22.199px" viewBox="0 0 22.199 22.199">
-                  <polygon points="22.199,2.804 19.396,0 11.1,8.297 2.804,0 0,2.803 8.297,11.1 0,19.396 2.803,22.199 11.1,13.902 19.396,22.199
-                  22.199,19.396 13.903,11.1 "/>
-                </svg>
+              Закрыть
+            </a>
+            <img src="img/preview_photo.jpg" alt="">
+            <p class="form-review__photo-name">img-686.jpg</p>
+          </figure>
+          <figure class="form-review__photo">
+            <a class="form-review__delete-link" href="#">
+              <svg class="form-review__delete-img" width="22.199px" height="22.199px" viewBox="0 0 22.199 22.199">
+                <polygon points="22.199,2.804 19.396,0 11.1,8.297 2.804,0 0,2.803 8.297,11.1 0,19.396 2.803,22.199 11.1,13.902 19.396,22.199
+                22.199,19.396 13.903,11.1 "/>
+              </svg>
 
-                Закрыть
-              </a>
-              <img src="img/preview_photo.jpg" alt="">
-              <p class="form-review__photo-name">img-686.jpg</p>
-            </figure>
-            <figure class="form-review__photo">
-              <a class="form-review__delete-link" href="#">
-                <svg class="form-review__delete-img" width="22.199px" height="22.199px" viewBox="0 0 22.199 22.199">
-                  <polygon points="22.199,2.804 19.396,0 11.1,8.297 2.804,0 0,2.803 8.297,11.1 0,19.396 2.803,22.199 11.1,13.902 19.396,22.199
-                  22.199,19.396 13.903,11.1 "/>
-                </svg>
+              Закрыть
+            </a>
+            <img src="img/preview_photo.jpg" alt="">
+            <p class="form-review__photo-name">img-686.jpg</p>
+          </figure>
+          <figure class="form-review__photo">
+            <a class="form-review__delete-link" href="#">
+              <svg class="form-review__delete-img" width="22.199px" height="22.199px" viewBox="0 0 22.199 22.199">
+                <polygon points="22.199,2.804 19.396,0 11.1,8.297 2.804,0 0,2.803 8.297,11.1 0,19.396 2.803,22.199 11.1,13.902 19.396,22.199
+                22.199,19.396 13.903,11.1 "/>
+              </svg>
 
-                Закрыть
-              </a>
-              <img src="img/preview_photo.jpg" alt="">
-              <p class="form-review__photo-name">img-686.jpg</p>
-            </figure>
-            <figure class="form-review__photo">
-              <a class="form-review__delete-link" href="#">
-                <svg class="form-review__delete-img" width="22.199px" height="22.199px" viewBox="0 0 22.199 22.199">
-                  <polygon points="22.199,2.804 19.396,0 11.1,8.297 2.804,0 0,2.803 8.297,11.1 0,19.396 2.803,22.199 11.1,13.902 19.396,22.199
-                  22.199,19.396 13.903,11.1 "/>
-                </svg>
+              Закрыть
+            </a>
+            <img src="img/preview_photo.jpg" alt="">
+            <p class="form-review__photo-name">img-686.jpg</p>
+          </figure>
+          <figure class="form-review__photo">
+            <a class="form-review__delete-link" href="#">
+              <svg class="form-review__delete-img" width="22.199px" height="22.199px" viewBox="0 0 22.199 22.199">
+                <polygon points="22.199,2.804 19.396,0 11.1,8.297 2.804,0 0,2.803 8.297,11.1 0,19.396 2.803,22.199 11.1,13.902 19.396,22.199
+                22.199,19.396 13.903,11.1 "/>
+              </svg>
 
-                Закрыть
-              </a>
-              <img src="img/preview_photo.jpg" alt="">
-              <p class="form-review__photo-name">img-686.jpg</p>
-            </figure>
-          </div>
+              Закрыть
+            </a>
+            <img src="img/preview_photo.jpg" alt="">
+            <p class="form-review__photo-name">img-686.jpg</p>
+          </figure>
         </div>
 
         <button class="form-review__button form-review__button--submit" type="submit">Оставить отзыв</button>
@@ -700,5 +700,7 @@
       Ок
     </a>
   </div>
+
+  <script src="js/script.js"></script>
 </body>
 </html>

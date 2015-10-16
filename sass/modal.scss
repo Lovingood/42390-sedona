@@ -49,6 +49,7 @@
     line-height: ($line-height-base + 2);
     font-weight: $font-bold;
     text-decoration: none;
+    cursor: pointer;
 
     &--ok {
       width: 100%;

@@ -283,9 +283,12 @@
     }
 
     &--file {
+      cursor: pointer;
+
       @media (min-width: $screen-lg-min) {
         background-color: $blue-base;
         color: #fff;
+        margin-bottom: 50px;
       }
 
       &:hover, &:focus {
@@ -297,6 +300,13 @@
         background-color: $blue-darkest;
         color: rgba(255, 255, 255, 0.3);
         outline: none;
+      }
+    }
+
+    &--date {
+      &:disabled {
+        border: 2px solid #b8b8b8;
+        padding: 18px 20px;
       }
     }
   }
@@ -415,11 +425,21 @@
 .counter {
   font-size: 0;
   text-align: center;
+  position: relative;
 
   &__image {
     display: block;
     margin: 0 auto;
     padding-top: 4px;
+  }
+
+  &__label {
+    font-size: $font-size-large;
+    line-height: ($line-height-base + 2);
+    color: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    left: 55%;
+    top: 25%;
   }
 
   &__button {
