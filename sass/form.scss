@@ -48,6 +48,10 @@
     }
   }
 
+  &__number-block {
+    @include base_input;
+  }
+
   &__input-group {
     padding: $padding-default;
     border-bottom: 1px solid $gray-sm-ligher;

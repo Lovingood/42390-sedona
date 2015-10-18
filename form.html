@@ -356,7 +356,7 @@
       <h1 class="form-page__title">Оставьте свой отзыв</h1>
       <p class="form-page__text">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
 
-      <form class="form-review" action="#">
+      <form class="form-review" action="post">
         <div class="form-review__input-group">
           <h2 class="form-review__title">Представьтесь, пожалуйста:</h2>
 
@@ -399,17 +399,17 @@
               <input class="form-review__input form-review__input--date" type="date" id="start-date" name="start-date">
             </div>
 
-            <div class="form-review__field">
+            <div class="form-review__field" id="days">
               <label class="form-review__label" for="duration">Дней пребывания:</label>
 
-              <div class="row counter">
+              <div class="row counter counter--duration">
                 <button class="counter__button counter__button--minus">
                   <svg class="counter__image counter__image--minus" width="20px" height="4px" viewBox="0 0 9.917 1.917" preserveAspectRatio="none">
                     <rect width="9.917" height="1.917"/>
                   </svg>
                 </button>
 
-                <input class="counter__input" type="text" id="duration" name="duration" value="14">
+                <input class="counter__input" type="text" id="duration" name="duration" value="0">
                 <span class="counter__label">дн.</span>
 
                 <button class="counter__button counter__button--plus">
@@ -433,14 +433,14 @@
           <div class="flexbox flexbox--amount">
             <div class="form-review__field">
               <label class="form-review__label form-review__label--without-padding" for="amount">Кол-во путешественников:</label>
-              <div class="row counter">
+              <div class="row counter counter--amount">
                 <button class="counter__button counter__button--minus">
                   <svg class="counter__image counter__image--minus" width="20px" height="4px" viewBox="0 0 9.917 1.917" preserveAspectRatio="none">
                     <rect width="9.917" height="1.917"/>
                   </svg>
                 </button>
 
-                <input class="counter__input" type="text" id="amount" name="amount" value="2">
+                <input class="counter__input" type="text" id="amount" name="amount" value="0">
                 <span class="counter__label">чел.</span>
 
                 <button class="counter__button counter__button--plus">
@@ -453,12 +453,13 @@
           </div>
         </div>
 
-        <div class="form-review__input-group">
-          <div class="row person-block">
+        <div class="form-review__input-group form-review__input-group--persons">
+
+          <script id="person-row" type="text/html">
             <div class="number-column">
               <div class="form-review__field form-review__field--full-width">
                 <label class="form-review__label" for="number-1">№</label>
-                <input class="form-review__input form-review__input--number" type="text" id="number-1" value="1">
+                <div class="form-review__number-block" type="text">{{number}}</div>
               </div>
             </div>
             <div class="info-column">
@@ -476,14 +477,14 @@
                 <label class="form-review__label" for="contact-patronymic">Отчество:</label>
                 <input class="form-review__input" type="text" id="contact-patronymic" name="contact-patronymic" value="Александрович">
               </div>
-            </div>
-          </div>
+            </div>          
+          </script>
 
-          <div class="row person-block">
+<!--           <div class="row person-block">
             <div class="number-column">
               <div class="form-review__field form-review__field--full-width">
                 <label class="form-review__label" for="number-2">№</label>
-                <input class="form-review__input form-review__input--number" type="text" value="2">
+                <div class="form-review__number-block" type="text">2</div>
               </div>
             </div>
             <div class="info-column">
@@ -502,7 +503,7 @@
                 <input class="form-review__input" type="text" id="contact-patronymic" name="contact-patronymic" value="Александрович">
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
 
         <div class="form-review__input-group form-review__input-group--checkbox">
@@ -534,92 +535,21 @@
         <div class="row form-review__input-group form-review__input-group--photo-group">
           <h2 class="form-review__title">Загрузите фотографии:</h2>
 
-          <input class="form-review__input form-review__input--file" type="file" placeholder="Выбрать фотографии"></input>
+          <input class="form-review__input form-review__input--file" id="upload_photo" type="file" placeholder="Выбрать фотографии" multiple></input>
 
-          <figure class="form-review__photo">
-            <a class="form-review__delete-link" href="#">
-              <svg class="form-review__delete-img" width="22.199px" height="22.199px" viewBox="0 0 22.199 22.199">
-                <polygon points="22.199,2.804 19.396,0 11.1,8.297 2.804,0 0,2.803 8.297,11.1 0,19.396 2.803,22.199 11.1,13.902 19.396,22.199
-                22.199,19.396 13.903,11.1 "/>
-              </svg>
+          <script id="image-template" type="text/html">
+              <a class="form-review__delete-link" href="#">
+                <svg class="form-review__delete-img" width="22.199px" height="22.199px" viewBox="0 0 22.199 22.199">
+                  <polygon points="22.199,2.804 19.396,0 11.1,8.297 2.804,0 0,2.803 8.297,11.1 0,19.396 2.803,22.199 11.1,13.902 19.396,22.199
+                  22.199,19.396 13.903,11.1 "/>
+                </svg>
 
-              Закрыть
-            </a>
-            <img src="img/preview_photo.jpg" alt="">
-            <p class="form-review__photo-name">img-686.jpg</p>
-          </figure>
-          <figure class="form-review__photo">
-            <a class="form-review__delete-link" href="#">
-              <svg class="form-review__delete-img" width="22.199px" height="22.199px" viewBox="0 0 22.199 22.199">
-                <polygon points="22.199,2.804 19.396,0 11.1,8.297 2.804,0 0,2.803 8.297,11.1 0,19.396 2.803,22.199 11.1,13.902 19.396,22.199
-                22.199,19.396 13.903,11.1 "/>
-              </svg>
-
-              Закрыть
-            </a>
-            <img src="img/preview_photo.jpg" alt="">
-            <p class="form-review__photo-name">img-686.jpg</p>
-          </figure>
-          <figure class="form-review__photo">
-            <a class="form-review__delete-link" href="#">
-              <svg class="form-review__delete-img" width="22.199px" height="22.199px" viewBox="0 0 22.199 22.199">
-                <polygon points="22.199,2.804 19.396,0 11.1,8.297 2.804,0 0,2.803 8.297,11.1 0,19.396 2.803,22.199 11.1,13.902 19.396,22.199
-                22.199,19.396 13.903,11.1 "/>
-              </svg>
-
-              Закрыть
-            </a>
-            <img src="img/preview_photo.jpg" alt="">
-            <p class="form-review__photo-name">img-686.jpg</p>
-          </figure>
-          <figure class="form-review__photo">
-            <a class="form-review__delete-link" href="#">
-              <svg class="form-review__delete-img" width="22.199px" height="22.199px" viewBox="0 0 22.199 22.199">
-                <polygon points="22.199,2.804 19.396,0 11.1,8.297 2.804,0 0,2.803 8.297,11.1 0,19.396 2.803,22.199 11.1,13.902 19.396,22.199
-                22.199,19.396 13.903,11.1 "/>
-              </svg>
-
-              Закрыть
-            </a>
-            <img src="img/preview_photo.jpg" alt="">
-            <p class="form-review__photo-name">img-686.jpg</p>
-          </figure>
-          <figure class="form-review__photo">
-            <a class="form-review__delete-link" href="#">
-              <svg class="form-review__delete-img" width="22.199px" height="22.199px" viewBox="0 0 22.199 22.199">
-                <polygon points="22.199,2.804 19.396,0 11.1,8.297 2.804,0 0,2.803 8.297,11.1 0,19.396 2.803,22.199 11.1,13.902 19.396,22.199
-                22.199,19.396 13.903,11.1 "/>
-              </svg>
-
-              Закрыть
-            </a>
-            <img src="img/preview_photo.jpg" alt="">
-            <p class="form-review__photo-name">img-686.jpg</p>
-          </figure>
-          <figure class="form-review__photo">
-            <a class="form-review__delete-link" href="#">
-              <svg class="form-review__delete-img" width="22.199px" height="22.199px" viewBox="0 0 22.199 22.199">
-                <polygon points="22.199,2.804 19.396,0 11.1,8.297 2.804,0 0,2.803 8.297,11.1 0,19.396 2.803,22.199 11.1,13.902 19.396,22.199
-                22.199,19.396 13.903,11.1 "/>
-              </svg>
-
-              Закрыть
-            </a>
-            <img src="img/preview_photo.jpg" alt="">
-            <p class="form-review__photo-name">img-686.jpg</p>
-          </figure>
-          <figure class="form-review__photo">
-            <a class="form-review__delete-link" href="#">
-              <svg class="form-review__delete-img" width="22.199px" height="22.199px" viewBox="0 0 22.199 22.199">
-                <polygon points="22.199,2.804 19.396,0 11.1,8.297 2.804,0 0,2.803 8.297,11.1 0,19.396 2.803,22.199 11.1,13.902 19.396,22.199
-                22.199,19.396 13.903,11.1 "/>
-              </svg>
-
-              Закрыть
-            </a>
-            <img src="img/preview_photo.jpg" alt="">
-            <p class="form-review__photo-name">img-686.jpg</p>
-          </figure>
+                Закрыть
+              </a>
+              <img src="{{image}}" alt="{{name}}">
+              <p class="form-review__photo-name">{{name}}</p>
+          </script>
+        
         </div>
 
         <button class="form-review__button form-review__button--submit" type="submit">Оставить отзыв</button>
@@ -700,7 +630,8 @@
       Ок
     </a>
   </div>
-
+  <script src="js/vendors/mustache.min.js"></script>
+  <script src="js/vendors/momentum.min.js"></script>
   <script src="js/script.js"></script>
 </body>
 </html>
