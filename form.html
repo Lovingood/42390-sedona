@@ -510,7 +510,8 @@
         <div class="row form-review__input-group form-review__input-group--photo-group">
           <h2 class="form-review__title">Загрузите фотографии:</h2>
 
-          <input class="form-review__input form-review__input--file" id="upload_photo" type="file" placeholder="Выбрать фотографии" multiple></input>
+          <input class="form-review__input form-review__input--file" id="upload_photo" type="file" name="photo-btn" placeholder="Выбрать фотографии" multiple></input>
+          <label for="upload_photo" class="form-review__label form-review__label--photo">Выбрать фотографии</label>
 
           <script id="image-template" type="text/html">
               <a class="form-review__delete-link" href="#">
@@ -591,7 +592,7 @@
     <p class="modal__title">Ваш отзыв отправлен!</p>
     <p class="modal__text">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
     <div class="modal__bottom">
-      <a class="modal__button modal__button--close">
+      <a href="form.html" class="modal__button modal__button--close">
         Закрыть окно
       </a>
     </div>
@@ -600,7 +601,7 @@
   <div class="modal modal--failure">
     <p class="modal__title">Что-то пошло не так!</p>
     <p class="modal__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
-    <a class="modal__button modal__button--ok">
+    <a href="form.html" class="modal__button modal__button--ok">
       Ок
     </a>
   </div>
