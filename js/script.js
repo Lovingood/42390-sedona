@@ -88,7 +88,7 @@ return; }
           document.querySelector(".modal--success").classList.add("modal--opened");
         }
         else {
-          document.querySelector(".modal--failure").classList.add("modal--opened");  
+          document.querySelector(".modal--failure").classList.add("modal--opened");
         }
       });
     });
