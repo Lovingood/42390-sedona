@@ -32,14 +32,14 @@
       minus.addEventListener('click', function() {
         event.preventDefault();
         changeNumber(false);
-      });  
+      });
     }
 
     if (plus) {
       plus.addEventListener('click', function() {
         event.preventDefault();
         changeNumber(true);
-      });  
+      });
     }
 
     function changeNumber(operation) {
@@ -53,7 +53,7 @@
         input.value = value + 1;
       } else {
         if (input.value > 1) {
-          input.value = value - 1;  
+          input.value = value - 1;
         }
       }
     }
@@ -67,13 +67,13 @@
 return; }
   var form = document.querySelector(".form-review");
   if (form) {
-    var area = form.querySelector(".form-review__input-group--photo-group");  
+    var area = form.querySelector(".form-review__input-group--photo-group");
   }
 
   if (document.querySelector("#image-template")) {
-    var template = document.querySelector("#image-template").innerHTML;  
+    var template = document.querySelector("#image-template").innerHTML;
   }
-  
+
   var queue = [];
     if (form) {
     form.addEventListener("submit", function(event) {
@@ -85,7 +85,7 @@ return; }
       request(data, function(response) {
         console.log(response);
       });
-    });    
+    });
   }
 
 
@@ -102,13 +102,13 @@ return; }
   }
 
   if (form) {
-    form.querySelector("#upload_photo").addEventListener("change", function() {   
+    form.querySelector("#upload_photo").addEventListener("change", function() {
       var files = this.files;
       for (var i = 0; i < files.length; i++) {
         preview(files[i]);
       }
       this.value = "";
-    });    
+    });
   }
 
   function preview(file) {
@@ -133,15 +133,15 @@ return; }
       queue.push({
         "file": file,
         "figure": figure
-      }); 
+      });
     });
 
-    reader.readAsDataURL(file);    
+    reader.readAsDataURL(file);
   }
   function removePreview(figure) {
     queue = queue.filter(function(element) {
       return element.figure != figure; });
-    figure.parentNode.removeChild(figure);    
+    figure.parentNode.removeChild(figure);
   }
 })();
 
@@ -149,18 +149,18 @@ return; }
 (function() {
   var persons = document.querySelector(".form-review__input-group--persons");
   if (document.querySelector("#person-row")) {
-    var person = document.querySelector("#person-row").innerHTML;  
+    var person = document.querySelector("#person-row").innerHTML;
   }
-  
+
   var amount = document.querySelector("#amount");
   if (amount) {
-    var count = Number(amount.value);  
+    var count = Number(amount.value);
   }
-  
+
   var amountblock = document.querySelector('.counter--amount');
   if (amountblock) {
     var minus = amountblock.querySelector('.counter__button--minus');
-    var plus = amountblock.querySelector('.counter__button--plus');    
+    var plus = amountblock.querySelector('.counter__button--plus');
   }
 
   if (minus) {
@@ -168,7 +168,7 @@ return; }
       event.preventDefault();
       var count = Number(amount.value);
       deleteRow(count);
-    });  
+    });
   }
 
   if (plus) {
@@ -176,7 +176,7 @@ return; }
       event.preventDefault();
       var count = Number(amount.value);
       makeRow(count);
-    });  
+    });
   }
 
   function makeRow(count) {
@@ -199,7 +199,7 @@ return; }
     var id = "number-" + (count + 1);
     element = document.getElementById(id);
     if (element) {
-      element.remove();  
+      element.remove();
     }
   }
 })();
@@ -207,27 +207,27 @@ return; }
 // Amount days
 (function() {
   if (document.getElementById('start-date')) {
-    var arrival = moment(document.getElementById('start-date').value);  
+    var arrival = moment(document.getElementById('start-date').value);
   }
-  
+
   if (duration) {
-    var duration = Number(document.getElementById('duration').value);  
+    var duration = Number(document.getElementById('duration').value);
   }
-  
+
   var departure = document.getElementById('end-date');
   var durationblock = document.querySelector('.counter--duration');
   if (durationblock) {
     var minus = durationblock.querySelector('.counter__button--minus');
-    var plus = durationblock.querySelector('.counter__button--plus');    
+    var plus = durationblock.querySelector('.counter__button--plus');
   }
 
   if (minus) {
     minus.addEventListener('click', function() {
       event.preventDefault();
       var arrival = moment(document.getElementById('start-date').value);
-      var duration = Number(document.getElementById('duration').value);    
+      var duration = Number(document.getElementById('duration').value);
       CalculateDeparture(arrival, duration);
-    });  
+    });
   }
 
   if (plus) {
@@ -236,17 +236,17 @@ return; }
       var arrival = moment(document.getElementById('start-date').value);
       var duration = Number(document.getElementById('duration').value);
       CalculateDeparture(arrival, duration);
-    });  
+    });
   }
 
 
   function CalculateDeparture(arrival, duration) {
     enddate = arrival.add(duration, 'day');
-    departure.value = enddate.format("YYYY-MM-DD");  
+    departure.value = enddate.format("YYYY-MM-DD");
   }
 })();
 
-// Google Map 
+// Google Map
 function initialize() {
   var mapOptions = {
     zoom: 15,
@@ -264,5 +264,5 @@ function initialize() {
 }
 
 if (google) {
-  google.maps.event.addDomListener(window, 'load', initialize);  
+  google.maps.event.addDomListener(window, 'load', initialize);
 };
