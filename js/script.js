@@ -249,13 +249,14 @@ return; }
 // Google Map
 function initialize() {
   var mapOptions = {
-    zoom: 15,
+    zoom: 8,
     center: new google.maps.LatLng(35.1397977,-111.6429784)
   }
-  var image = '<svg class="map-canvas__point" width="27px" height="27px" viewBox="0 0 27 27"><circle fill="#FFFFFF" cx="13.5" cy="13.5" r="13.5"/><circle fill="#81B3D3" cx="13.5" cy="13.5" r="8.361"/></svg>'
-  var map = new google.maps.Map(document.getElementById('map-canvas'),
+  var image = 'img/map-marker.png';
+
+  var map = new google.maps.Map(document.getElementById('google-map'),
                                 mapOptions);
-  var myLatLng = new google.maps.LatLng(35.1397977,-111.6429784);
+  var myLatLng = new google.maps.LatLng(34.9897977,-111.6429784);
   var beachMarker = new google.maps.Marker({
     position: myLatLng,
     map: map,
