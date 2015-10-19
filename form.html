@@ -363,12 +363,12 @@
           <div class="flexbox">
             <div class="form-review__field">
               <label class="form-review__label" for="surname">Фамилия:</label>
-              <input class="form-review__input" type="text" id="surname" name="surname" value="Иванов">
+              <input class="form-review__input" type="text" id="surname" name="surname" value="Иванов" data-req="required">
             </div>
 
             <div class="form-review__field">
               <label class="form-review__label" for="name">Имя:</label>
-              <input class="form-review__input" type="text" id="name" name="name" value="Петр">
+              <input class="form-review__input" type="text" id="name" name="name" value="Петр" data-req="required">
             </div>
 
             <div class="form-review__field">
@@ -396,7 +396,7 @@
           <div class="flexbox">
             <div class="form-review__field">
               <label class="form-review__label" for="start-date">Дата приезда:</label>
-              <input class="form-review__input form-review__input--date" type="date" id="start-date" name="start-date">
+              <input class="form-review__input form-review__input--date" type="date" id="start-date" name="start-date" data-req="required">
             </div>
 
             <div class="form-review__field" id="days">
@@ -409,7 +409,7 @@
                   </svg>
                 </button>
 
-                <input class="counter__input" type="text" id="duration" name="duration" value="0">
+                <input class="counter__input" type="text" id="duration" name="duration" value="0" data-req="required">
                 <span class="counter__label">дн.</span>
 
                 <button class="counter__button counter__button--plus">
@@ -422,7 +422,7 @@
 
             <div class="form-review__field">
               <label class="form-review__label" for="end-date">Дата отъезда:</label>
-              <input class="form-review__input form-review__input--date" type="date" id="end-date" name="end-date" disabled>
+              <input class="form-review__input form-review__input--date" type="date" id="end-date" name="end-date" disabled data-req="required">
             </div>
           </div>
         </div>
@@ -440,7 +440,7 @@
                   </svg>
                 </button>
 
-                <input class="counter__input" type="text" id="amount" name="amount" value="0">
+                <input class="counter__input" type="text" id="amount" name="amount" value="0" data-req="required">
                 <span class="counter__label">чел.</span>
 
                 <button class="counter__button counter__button--plus">
@@ -464,18 +464,18 @@
             </div>
             <div class="info-column">
               <div class="form-review__field form-review__field--info-column">
-                <label class="form-review__label" for="contact-surname">Фамилия:</label>
-                <input class="form-review__input" type="text" id="contact-surname" name="contact-surname" value="Иванов">
+                <label class="form-review__label" for="contact-surname-{{number}}">Фамилия:</label>
+                <input class="form-review__input" type="text" id="contact-surname-{{number}}" name="contact-surname-{{number}}" value="Иванов" data-req="required">
               </div>
 
               <div class="form-review__field form-review__field--info-column">
-                <label class="form-review__label" for="contact-name">Имя:</label>
-                <input class="form-review__input" type="text" id="contact-name" name="contact-name" value="Петр">
+                <label class="form-review__label" for="contact-name-{{number}}">Имя:</label>
+                <input class="form-review__input" type="text" id="contact-name-{{number}}" name="contact-name-{{number}}" value="Петр" data-req="required">
               </div>
 
               <div class="form-review__field form-review__field--info-column">
-                <label class="form-review__label" for="contact-patronymic">Отчество:</label>
-                <input class="form-review__input" type="text" id="contact-patronymic" name="contact-patronymic" value="Александрович">
+                <label class="form-review__label" for="contact-patronymic-{{number}}">Отчество:</label>
+                <input class="form-review__input" type="text" id="contact-patronymic-{{number}}" name="contact-patronymic-{{number}}" value="Александрович">
               </div>
             </div>
           </script>

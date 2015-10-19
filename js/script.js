@@ -78,22 +78,34 @@ return; }
     if (form) {
     form.addEventListener("submit", function(event) {
       event.preventDefault();
-      var data = new FormData(form);
-      queue.forEach(function(element) {
-        data.append("images", element.file);
-      });
-      request(data, function(response) {
-        console.log(response);
-        if (response) {
-          document.querySelector(".modal--success").classList.add("modal--opened");
-        }
-        else {
-          document.querySelector(".modal--failure").classList.add("modal--opened");
-        }
-      });
+      if (ValidateForm()) {
+        var data = new FormData(form);
+        queue.forEach(function(element) {
+          data.append("images", element.file);
+        });
+        request(data, function(response) {
+          console.log(response);
+          if (response) {
+            document.querySelector(".modal--success").classList.add("modal--opened");
+          }
+          else {
+            document.querySelector(".modal--failure").classList.add("modal--opened");
+          }
+        });
+       };
     });
   }
 
+  function ValidateForm() {
+    var required = form.querySelectorAll('[data-req="required"]');
+    for (var i = 0; i < required.length; i++) {
+      if (required[i].value == null || required[i].value == '' || required[i].value == 0 || required[i].value == "0") {
+        document.querySelector(".modal--failure").classList.add("modal--opened");
+        return false;
+      }
+    }
+    return true;
+  }
 
   function request(data, fn) {
     var xhr = new XMLHttpRequest();
