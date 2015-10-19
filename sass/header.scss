@@ -6,6 +6,14 @@
   position: relative;
   font-size: 0;
 
+  @media (max-width: $screen-xs-max) {
+    display: none;
+  }
+
+  &--opened {
+    display: block;
+  }
+
   &::after {
     @media (min-width: $screen-sm-min) {
       display: none;
@@ -161,6 +169,10 @@
   &--short {
     padding-top: 100px;
     padding-bottom: 120px;
+
+    @media (min-width: $screen-sm-min) {
+      background-position: center;
+    }
   }
 
   &__mask {

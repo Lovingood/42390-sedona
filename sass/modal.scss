@@ -49,6 +49,7 @@
     line-height: ($line-height-base + 2);
     font-weight: $font-bold;
     text-decoration: none;
+    cursor: pointer;
 
     &--ok {
       width: 100%;
@@ -88,5 +89,9 @@
     @include base_text;
     padding: 20px 17%;
     padding-top: 0;
+  }
+
+  &--opened {
+    display: block;
   }
 }

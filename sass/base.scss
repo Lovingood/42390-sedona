@@ -39,13 +39,6 @@ h2 {
     flex-wrap: wrap;
     justify-content: space-between;
 
-    &--photo-group {
-      border-bottom: none;
-      font-size: 0;
-      justify-content: flex-start;
-      padding-top: 50px;
-    }
-
     &--amount {
       @media (min-width: $screen-sm-min) {
         justify-content: center;

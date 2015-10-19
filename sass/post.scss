@@ -83,20 +83,20 @@
     font-weight: $font-bold;
     text-transform: uppercase;
     padding: 0;
+  }
 
-    & li {
-      position: relative;
-      padding-left: 17px;
+  & li {
+    position: relative;
+    padding-left: 17px;
 
-      &:before {
-        content: '';
-        width: 7px;
-        height: 7px;
-        background-color: $blue-base;
-        position: absolute;
-        top: 8px;
-        left: 0;
-      }
+    &:before {
+      content: '';
+      width: 7px;
+      height: 7px;
+      background-color: $blue-base;
+      position: absolute;
+      top: 8px;
+      left: 0;
     }
   }
 
@@ -143,6 +143,8 @@
     margin-bottom: 20px;
     text-align: center;
     cursor: pointer;
+    width: 49%;
+    box-sizing: border-box;
 
     @media (min-width: $screen-sm-min) {
       width: 20%;
@@ -165,7 +167,7 @@
       margin-bottom: 0;
 
       @media (min-width: $screen-sm-min) {
-        width: 26%;
+        width: 50%;
         margin-bottom: auto;
       }
     }
