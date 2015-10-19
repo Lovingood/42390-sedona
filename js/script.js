@@ -92,7 +92,7 @@ return; }
             document.querySelector(".modal--failure").classList.add("modal--opened");
           }
         });
-       };
+      };
     });
   }
 
