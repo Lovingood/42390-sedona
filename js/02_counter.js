@@ -2,7 +2,7 @@
 (function () {
   var elements = document.querySelectorAll('.counter');
 
-  if elements {
+  if (elements) {
     for (var i = 0; i < elements.length; i++) {
       initNumberField(elements[i]);
     }
