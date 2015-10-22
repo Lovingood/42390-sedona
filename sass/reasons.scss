@@ -83,7 +83,6 @@
 
     @media (min-width: $screen-sm-min) {
       min-height: 256px;
-      max-height: 256px;
     }
 
     @media (min-width: $screen-lg-min) {
@@ -106,6 +105,7 @@
       min-height: 37px;
       display: block;
       width: 100%;
+      background-color: transparent;
       background: url('../img/reason-mask.png') no-repeat;
       background-size: 100% 37px;
       position: absolute;

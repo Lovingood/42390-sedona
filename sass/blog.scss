@@ -162,6 +162,7 @@
 
     @media (min-width: $screen-sm-min) {
       display: inline-block;
+      vertical-align: top;
       font-size: $font-size-larger;
       line-height: ($line-height-base + 2);
       font-weight: $font-bold;
@@ -183,7 +184,7 @@
 
   &__link {
     display: block;
-    background: $blue-base;
+    background-color: $blue-base;
     color: #fff;
     font-size: $font-size-larger;
     line-height: ($line-height-base + 2);

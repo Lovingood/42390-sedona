@@ -70,6 +70,7 @@
 
   &__button {
     display: inline-block;
+    vertical-align: top;
     padding: 15px ((54% / 320) * 100);
     text-transform: uppercase;
     color: $link-base;
@@ -190,6 +191,7 @@
 
     &--radio {
       display: inline-block;
+      vertical-align: top;
 
       @media (min-width: $screen-sm-min) {
         padding-left: 0;
@@ -228,6 +230,7 @@
 
     &--checkbox {
       display: inline-block;
+      vertical-align: top;
       color: #000;
       font-weight: $font-bold;
       text-transform: none;
@@ -352,14 +355,14 @@
 
   &__checkbox {
     @media (min-width: $screen-sm-min) {
-      width: 35%;
+      width: 45%;
 
       &:nth-of-type(1) {
         margin-bottom: 35px;
       }
     }
 
-    @media (min-width: $screen-sm-min) {
+    @media (min-width: $screen-lg-min) {
       width: auto;
     }
   }
@@ -531,6 +534,7 @@
     width: 55%;
     display: inline-block;
     margin-bottom: 20px;
+    vertical-align: top;
 
     @media (min-width: $screen-sm-min) {
       width: 50%;

@@ -13,6 +13,7 @@
   &__hashtag {
     text-align: center;
     display: inline-block;
+    vertical-align: top;
     font-family: $font-family-base;
     font-size: $font-size-large;
     line-height: ($line-height-base + 2);
@@ -98,6 +99,7 @@
 
   @media (min-width: $screen-sm-min) {
     display: inline-block;
+    vertical-align: middle;
     padding-top: 5px;
   }
 

@@ -30,6 +30,7 @@
 
   &__link {
     display: inline-block;
+    vertical-align: top;
     text-align: center;
     font-size: $font-size-large;
     line-height: $line-height-larger;
@@ -155,6 +156,7 @@
   padding-top: 45px;
   padding-bottom: 45px;
   text-align: center;
+  background-color: #6894B7;
   background: url('../img/photo-background@1x.jpg') no-repeat;
   background-size: cover;
   background-position: center top;
