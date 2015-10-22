@@ -15,8 +15,7 @@
       <nav class="main-nav">
         <button class="main-nav__close">
           <svg fill="#fff" width="22.199px" height="22.199px" viewBox="0 0 22.199 22.199">
-            <polygon points="22.199,2.804 19.396,0 11.1,8.297 2.804,0 0,2.803 8.297,11.1 0,19.396 2.803,22.199 11.1,13.902 19.396,22.199
-                     22.199,19.396 13.903,11.1 "/>
+            <polygon points="22.199,2.804 19.396,0 11.1,8.297 2.804,0 0,2.803 8.297,11.1 0,19.396 2.803,22.199 11.1,13.902 19.396,22.19922.199,19.396 13.903,11.1 "/>
           </svg>
           Закрыть
         </button>
@@ -33,7 +32,12 @@
             <path fill="#81b3d2" d="M137,0h-14.173H14.173H0l31.279,35.161l0,0l27.8,31.249c5.182,5.824,13.66,5.824,18.842,0l27.8-31.249l0,0L137,0z"/>
           </svg>
 
-          <img class="top-row__logo-img" src="img/logo-sedona@1x.png" srcset="img/logo-sedona@2x.png 2x, img/logo-sedona@3x.png 3x" height="56"     width="67" alt="Logo Sedona">
+          <picture class="top-row__logo-img">
+            <source srcset="img/logo-sedona@1x.png 1x" type="image/png">
+            <source srcset="img/logo-sedona@2x.png 2x" type="image/png">
+            <source srcset="img/logo-sedona@3x.png 3x" type="image/png">
+            <img class="top-row__logo-img" src="img/logo-sedona@1x.png" height="56" width="67" alt="Logo Sedona">
+          </picture>
         </a>
 
 
