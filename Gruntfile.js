@@ -10,6 +10,24 @@ module.exports = function(grunt) {
       build: ["build"]
     },
 
+    concat: {
+      options: {
+        separator: ';'
+      },
+      dist: {
+        src: ['js/vendors/*.js',  'js/*.js'],
+        dest: 'build/js/script.js'
+      }
+    },
+
+    uglify: {
+      my_target: {
+        files: {
+          'build/js/script.min.js': ['build/js/script.js']
+        }
+      }
+    },
+
     copy: {
       build: {
         files: [{
@@ -17,7 +35,6 @@ module.exports = function(grunt) {
           cwd: "",
           src: [
             "img/**",
-            "js/**",
             "index.html",
             "*.html",
           ],
@@ -75,7 +92,7 @@ module.exports = function(grunt) {
         },
         files: [{
           expand: true,
-          src: ["build/img/**/*.{png,jpg,gif,svg}"] 
+          src: ["build/img/**/*.{png,jpg,gif,svg}"]
         }]
       }
     },
@@ -87,31 +104,13 @@ module.exports = function(grunt) {
         collapseBooleanAttributes: true,
         caseSensitive: true,
         keepClosingSlash: false
-      }, 
+      },
       html: {
         files: {
           "build/index.min.html": "build/index.html",
           "build/form.min.html": "build/form.html",
           "build/blog.min.html": "build/blog.html",
           "build/post.min.html": "build/post.html"
-        }
-      }
-    },
-
-    concat: {
-      options: {
-        separator: ';'
-      },
-      dist: {
-        src: ['build/js/*.js'],
-        dest: 'build/js/script.js'
-      }
-    },
-
-    uglify: {
-      my_target: {
-        files: {
-          'build/js/script.min.js': ['build/js/script.js']
         }
       }
     },
@@ -149,7 +148,7 @@ module.exports = function(grunt) {
     }
   };
 
-  grunt.registerTask('build', ['clean', 'copy', 'sass', 'cmq', 'postcss', 'cssmin', 'imagemin', 'htmlmin', 'concat', 'uglify', 'replace']);
+  grunt.registerTask('build', ['clean', 'concat', 'copy', 'sass', 'cmq', 'postcss', 'cssmin', 'imagemin', 'htmlmin', 'uglify', 'replace']);
 
   config = require('./.gosha')(grunt, config);
 
