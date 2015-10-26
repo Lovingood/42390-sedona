@@ -73,6 +73,17 @@ module.exports = function(grunt) {
       }
     },
 
+    csscomb: {
+        dist: {
+            options: {
+                config: '.csscomb.json'
+            },
+            files: {
+                'build/css/style.css': ['build/css/style.css']
+            }
+        }
+    },
+
     cssmin: {
       target: {
         files: [{
@@ -148,7 +159,7 @@ module.exports = function(grunt) {
     }
   };
 
-  grunt.registerTask('build', ['clean', 'concat', 'copy', 'sass', 'cmq', 'postcss', 'cssmin', 'imagemin', 'htmlmin', 'uglify', 'replace']);
+  grunt.registerTask('build', ['clean', 'concat', 'copy', 'sass', 'cmq', 'postcss', 'csscomb', 'cssmin', 'imagemin', 'htmlmin', 'uglify', 'replace']);
 
   config = require('./.gosha')(grunt, config);
 
