@@ -225,13 +225,18 @@
     width: 40px;
     fill: $blue-base;
     left: ((20% / 320) * 100);
-    top: 25%;
+    top: 30px;
     transform: translateY(-50%);
 
     @media (min-width: $screen-sm-min) {
       width: 72px;
       left: 50%;
       transform: translateX(-50%);
+      top: 75px;
+    }
+
+    @media (min-width: $screen-lg-min) {
+      top: 90px;
     }
   }
 }

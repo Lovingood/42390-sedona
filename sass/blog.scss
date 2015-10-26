@@ -109,13 +109,14 @@
       width: 100%;
       margin: 0 auto;
 
-      &:before, &:after {
+      &:before {
         content: '';
-        width: 17.5%;
+        width: 100%;
         height: 1px;
         background-color: #dbdbdb;
         position: absolute;
         top: 40%;
+        z-index: 1;
       }
 
       &:before {
@@ -131,10 +132,24 @@
   &__date {
     @include base_tags;
     margin-right: 10.714%;
+    background-color: #fff;
+    z-index: 2;
+
+    &--post {
+      margin-right: 0;
+      padding-left: 10.714%;
+      padding-right: 10.714%;
+    }
   }
 
   &__type {
     @include base_tags;
+    background-color: #fff;
+    z-index: 2;
+
+    &--post {
+      padding-right: 10.714%;
+    }
   }
 }
 
@@ -190,10 +205,10 @@
     line-height: ($line-height-base + 2);
     text-decoration: none;
     width: 58px;
-    height: 58px;
     text-align: center;
-    vertical-align: center;
-    padding-top: 20px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    word-wrap: break-word;
     box-sizing: border-box;
     margin-bottom: 16px;
     font-weight: $font-bold;

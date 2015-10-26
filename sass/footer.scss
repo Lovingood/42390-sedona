@@ -28,6 +28,8 @@
       display: block;
       margin: 0;
       padding-top: 15px;
+      width: 25%;
+      word-wrap: break-word;
     }
   }
 }
@@ -101,6 +103,8 @@
     display: inline-block;
     vertical-align: middle;
     padding-top: 5px;
+    width: 25%;
+    text-align: right;
   }
 
   &__image {

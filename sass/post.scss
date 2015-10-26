@@ -123,6 +123,7 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  align-items: flex-start;
 
   @media (min-width: $screen-sm-min) {
     border: none;
@@ -145,6 +146,7 @@
     cursor: pointer;
     width: 49%;
     box-sizing: border-box;
+    word-wrap: break-word;
 
     @media (min-width: $screen-sm-min) {
       width: 20%;
